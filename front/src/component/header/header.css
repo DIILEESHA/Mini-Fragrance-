@@ -1,3 +1,83 @@
-.header_container{
-    /* overflow:hidden */
+.header_container {
+  height: 100vh;
+  margin-top: -80px;
+  width: 100%;
+  /* border: 1px solid red; */
+  /* overflow: hidden; */
+}
+
+.imager img {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.imager {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.imager::after {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(65, 64, 64, 0.1);
+}
+
+.for {
+  color: #fff;
+  width: 100px;
+  height: 60px;
+}
+
+.adapter {
+  position: relative;
+}
+
+.adpter_abs {
+  position: absolute;
+  color: #fff;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.adpter_abs2 {
+  position: absolute;
+  color: #fff;
+  right: 0;
+  left: 0;
+  bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.adpter_abs > h2 {
+  text-shadow: rgb(34, 34, 34) 1px 0 10px;
+  z-index: 1;
+  font-size: 16px;
+}
+
+.adpter_abs2 > h2 {
+  font-size: 16px;
+  z-index: 1;
+  cursor: pointer;
+  text-shadow: rgb(34, 34, 34) 1px 0 10px;
+
+  /* letter-spacing: 1.1px; */
+  border-bottom: 1px solid #fff;
+}
+
+.adpter_abs2 > h2:hover {
+  text-shadow: rgb(255, 0, 0) 1px 0 10px;
 }

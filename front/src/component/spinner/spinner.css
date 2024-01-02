@@ -1,0 +1,14 @@
+.ss {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: black;
+  color: #ddd;
+  z-index: 1000;
+}
+
+.ss h1 {
+  font-size: 90px;
+  text-shadow: 5px 6px rgb(121, 119, 120);
+}

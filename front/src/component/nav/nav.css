@@ -1,10 +1,20 @@
 .nav_container {
+  /* position: relative; */
+
+  overflow: hidden;
 }
 
 .nav_sm_title {
   height: 33px;
+
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+  width: 100%;
   /* letter-spacing: 1.1px; */
   background-color: #0f0f0f;
+  /* background-color:teal; */
+
   color: #fff;
   font-size: 13px;
   text-align: center;
@@ -12,4 +22,104 @@
   align-items: center;
   justify-content: center;
   font-weight: 300;
+}
+
+.lg_nav {
+  /* position: absolute; */
+  background-color: rgba(0, 0, 0, 0);
+  position: sticky;
+  top: 33px;
+  z-index: 1000;
+  height: 80px;
+  /* display: flex; */
+  width: 100%;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  transition: background-color 0s ease;
+}
+
+.lg_nav .pink {
+  transition: background-color 0s ease;
+}
+
+.lg_nav.scrolled {
+  background: #bcb3af;
+  text-shadow: #bcb3af 1px 0 3px;
+}
+
+.lg_nav.pink {
+  background: #bcb3af;
+  text-shadow: #bcb3af 1px 0 3px;
+}
+
+.lg_nav.pink .nav_lg_li {
+  text-shadow: #bcb3af 1px 0 3px;
+}
+
+.lg_nav.scrolled .nav_lg_li {
+  text-shadow: #bcb3af 1px 0 3px;
+}
+
+.lg_naver {
+  /* width: 100vw; */
+  overflow: hidden;
+}
+
+.lgnav_ul {
+  display: flex;
+  gap: 30px;
+  color: #fff;
+}
+
+.nav_lg_li {
+  list-style: none;
+
+  /* text-shadow: 2px 2px #000; */
+
+  /* text-shadow: #bcb3af 1px 0 3px; */
+  text-shadow: rgb(34, 34, 34) 1px 0 3px;
+
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.duta {
+  font-size: 30px;
+  /* margin-top: 10px; */
+  text-align: center;
+  text-shadow: #bcb3af 1px 0 4px;
+
+  /* text-shadow: 2px 2px #000; */
+}
+.meeba {
+  text-align: center;
+  text-shadow: #bcb3af 1px 0 3px;
+
+  font-size: 10px;
+  font-weight: 100;
+}
+
+.nav_lg_li a.active {
+  text-shadow: rgb(255, 0, 0) 1px 0 5px;
+}
+
+.lgnav_ul a.active {
+  /* color: #000; */
+}
+
+.active-link {
+}
+
+.nav_lg_li:hover {
+  text-shadow: rgb(255, 0, 0) 1px 0 10px;
+  cursor: pointer;
+}
+
+.casper:hover {
+  text-shadow: rgb(255, 0, 0) 1px 0 10px;
 }

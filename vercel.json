@@ -1,0 +1,16 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "front/**/*", 
+        "use": "@vercel/node",
+        "config": { "maxLambdaSize": "15mb" }
+      },
+      {
+        "src": "cms/**/*",
+        "use": "@vercel/static-build",
+        "config": { "distDir": "cms/sanity/dist" }
+      }
+    ]
+  }
+  

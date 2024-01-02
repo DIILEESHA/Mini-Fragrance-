@@ -27,3 +27,5 @@ node_modules
 
 # Dotenv and similar local-only files
 *.local
+
+.vercel

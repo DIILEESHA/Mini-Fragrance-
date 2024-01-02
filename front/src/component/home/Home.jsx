@@ -1,12 +1,13 @@
 import React from "react";
 import "./home.css";
-import Nav from "../nav/Nav";
 import Header from "../header/Header";
+import WeAre from "../who/WeAre";
 
 const Home = () => {
   return (
-    <div>
+    <div className="home">
       <Header />
+      <WeAre />
     </div>
   );
 };
