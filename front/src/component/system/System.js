@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./sys.css";
-import About from "../about/About";
+import '../who/are.css'
 import sanity from "../Sanity/sanity";
 import { PortableText } from "@portabletext/react";
 
