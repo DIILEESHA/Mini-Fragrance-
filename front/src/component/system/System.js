@@ -19,7 +19,58 @@ const System = () => {
             },
         },
         systtitle,
-        sysbody
+        sysbody,
+        systitle2,
+        sysimage1{
+            asset->{
+                _id,
+                url
+            }
+        },
+        sysimage2{
+                asset->{
+                    _id,
+                    url
+                }
+        },
+        systitle3,
+        sysbody2,
+        sysimage4{
+                asset->{
+                    _id,
+                    url
+                }
+        },
+        sysimage5{
+                asset->{_id,url}
+        }
+        ,
+        apply,
+        sysimage6{
+            asset->{
+                _id,
+                url
+            }
+        },
+        systitle4,
+        sysbody3,
+        sysimage7{
+            asset->{
+                _id,
+                url
+            }
+        }, sysimage8{
+            asset->{
+                _id,
+                url
+            }
+        }, sysimage9{
+            asset->{
+                _id,
+                url
+            }
+        },
+
 
     }`;
 
@@ -39,20 +90,80 @@ const System = () => {
         <div key={index}>
           <video
             style={{ width: "100%", height: "auto" }}
-            src={sys.videoFile?.asset.url}
+            src={sys?.videoFile?.asset?.url}
             autoPlay
+            muted
           ></video>
 
-          <h2
-            className="system_title"
-            style={{ border: "1px solid #333", color: "#000" }}
-          >
-            {sys?.systtitle}
-          </h2>
+          <h2 className="system_title">{sys?.systtitle}</h2>
 
-          <p className="sys_contain">
+          <p className="detail_para u">
             <PortableText value={sys?.sysbody} />
           </p>
+
+          <h2 className="system_title w">{sys?.systitle2}</h2>
+
+          <div className="are_grid">
+            <div className="are_sub">
+              <img className="bus" src={sys?.sysimage1?.asset?.url} alt="" />
+            </div>
+
+            <div className="are_sub">
+              <img className="dus" src={sys?.sysimage2?.asset?.url} alt="" />
+            </div>
+
+            <div className="are_sub">
+              <div className="are_detail">
+                <h2 className="detail_title">{sys?.systitle3}</h2>
+                <p className="detail_para">
+                  <PortableText value={sys?.sysbody2} />
+                </p>
+              </div>
+            </div>
+
+            <div className="are_sub">
+              <img className="dus" src={sys?.sysimage4?.asset?.url} alt="" />
+            </div>
+          </div>
+
+          <div className="second_image">
+            <img className="triple" src={sys?.sysimage5?.asset?.url} alt="" />
+          </div>
+
+          <h2 className="apply">{sys?.apply}</h2>
+
+          <div className="are_grid">
+            <div className="are_sub">
+              <img className="bus" src={sys?.sysimage6?.asset?.url} alt="" />
+            </div>
+
+            <div className="are_sub"></div>
+
+            <div className="are_sub">
+              <div className="are_detail">
+                <h2 className="detail_title">{sys?.systitle4}</h2>
+                <p className="detail_para">
+                  <PortableText value={sys?.sysbody3} />
+                </p>
+              </div>
+            </div>
+
+            <div className="are_sub">
+              <img className="dus" src={sys?.sysimage7?.asset?.url} alt="" />
+            </div>
+
+            <div className="are_sub">
+              <img className="dus" src={sys?.sysimage8?.asset?.url} alt="" />
+            </div>
+
+            <div className="are_sub"></div>
+
+            <div className="are_sub"></div>
+
+            <div className="are_sub">
+              <img className="dus" src={sys?.sysimage9?.asset?.url} alt="" />
+            </div>
+          </div>
         </div>
       ))}
     </div>

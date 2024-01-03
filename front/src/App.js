@@ -20,7 +20,7 @@ function App() {
     const fetchData = async () => {
       setTimeout(() => {
         setLoading(false);
-      }, 100);
+      }, 1000);
     };
 
     fetchData();

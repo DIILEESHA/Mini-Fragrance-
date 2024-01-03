@@ -77,7 +77,49 @@ export default defineType({
     }),
 
     defineField({
+      name: 'apply',
+      title: 'Title',
+      type: 'string',
+    }),
+    defineField({
       name: 'sysimage6',
+      title: 'Main image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
+
+    defineField({
+      name: 'systitle4',
+      title: 'Title',
+      type: 'string',
+    }),
+
+    defineField({
+      name: 'sysbody3',
+      title: 'Body',
+      type: 'blockContent',
+    }),
+
+    defineField({
+      name: 'sysimage7',
+      title: 'Main image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
+      name: 'sysimage8',
+      title: 'Main image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
+      name: 'sysimage9',
       title: 'Main image',
       type: 'image',
       options: {
