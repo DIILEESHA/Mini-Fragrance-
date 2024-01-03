@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Nav from "../nav/Nav";
 import client from "../Sanity/sanity.js";
+
 import Lgnav from "../nav/Lgnav.js";
 import { PrevArrow, NextArrow } from "./CustomArrow";
 import ParticleComponent from "../particle/ParticleComponent.js";
@@ -67,6 +68,7 @@ const Header = () => {
                     style={{ height: "100vh" }}
                     src={header?.mainheaderImage?.asset?.url}
                     alt={header?.title}
+                    loading="lazy"
                   />
                   <div className="adpter_abs">
                     <h2>Fragrance follows function</h2>

@@ -1,7 +1,6 @@
-import React from "react";
+import { lazy } from "react";
 import "./are.css";
-import { FaLongArrowAltRight } from "react-icons/fa";
-import ParticleComponent from "../particle/ParticleComponent";
+const ParticleComponent = lazy(() => import("../particle/ParticleComponent"));
 
 const weAre = () => {
   const showParticles = true;
@@ -38,15 +37,18 @@ const weAre = () => {
           </div>
         </div>
         <div className="are_sub">
-          <img className="bus"
+          <img
+            className="bus"
             src="https://nullpunkt.co/cdn/shop/files/01_Stills_110.jpg?v=1669921261"
+            loading="lazy"
             alt=""
           />
         </div>
         <div className="are_sub">
           <img
-          className="dus"
+            className="dus"
             src="https://nullpunkt.co/cdn/shop/files/04_Couple_64.jpg?v=1671625376&width=1500"
+            loading="lazy"
             alt=""
           />
         </div>
@@ -86,8 +88,9 @@ const weAre = () => {
 
       <div className="second_image">
         <img
-        className="triple"
+          className="triple"
           src="https://nullpunkt.co/cdn/shop/files/04_Couple_157-2.jpg?v=1669923474&width=1500"
+          loading="lazy"
           alt=""
         />
       </div>

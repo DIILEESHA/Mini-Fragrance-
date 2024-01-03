@@ -1,27 +1,27 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState, lazy, Suspense } from "react";
 import "./App.css";
-import Header from "./component/header/Header";
-import FetchData from "./component/header/Header";
-import TextComponent from "./component/header/TextComponent";
-import Home from "./component/home/Home";
 import Spinner from "./component/spinner/Spinner";
-import { Routes, Route, BrowserRouter, useLocation } from "react-router-dom";
-import About from "./component/about/About";
-import Nav from "./component/nav/Nav";
-import Lgnav from "./component/nav/Lgnav";
-import System from "./component/system/System";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Cookie from "./component/cookie/Cookie";
+import "./fonts/fonts.css";
+
+// Dynamically import your components using React.lazy
+const Home = lazy(() => import("./component/home/Home"));
+const About = lazy(() => import("./component/about/About"));
+const Nav = lazy(() => import("./component/nav/Nav"));
+const Lgnav = lazy(() => import("./component/nav/Lgnav"));
+const System = lazy(() => import("./component/system/System"));
 
 function App() {
   const [loading, setLoading] = useState(true);
-
   const [scrolling, setScrolling] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
+      // Simulate data fetching delay
       setTimeout(() => {
         setLoading(false);
-      }, 10000);
+      }, 3000);
     };
 
     fetchData();
@@ -41,6 +41,7 @@ function App() {
   }, []);
 
   const isHomepage = window.location.pathname === "/";
+
   return (
     <div className="App">
       {loading ? (
@@ -48,27 +49,28 @@ function App() {
       ) : (
         <BrowserRouter>
           <Cookie />
-          <Nav />
-          <Lgnav isScrolled={scrolling} isHomepage={isHomepage} />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route
-              path="/about"
-              element={<About />}
-              isScrolled={!scrolling}
-              isHomepage={!isHomepage}
-            />
-            <Route
-              path="/system"
-              element={<System />}
-              isScrolled={!scrolling}
-              isHomepage={!isHomepage}
-            />
-          </Routes>
+          {/* Wrap your lazy-loaded components with Suspense */}
+          <Suspense fallback={<Spinner />}>
+            <Nav />
+            <Lgnav isScrolled={scrolling} isHomepage={isHomepage} />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route
+                path="/about"
+                element={<About />}
+                isScrolled={!scrolling}
+                isHomepage={!isHomepage}
+              />
+              <Route
+                path="/system"
+                element={<System />}
+                isScrolled={!scrolling}
+                isHomepage={!isHomepage}
+              />
+            </Routes>
+          </Suspense>
         </BrowserRouter>
       )}
-
-      {/* <Header/> */}
     </div>
   );
 }

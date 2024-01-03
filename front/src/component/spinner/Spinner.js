@@ -1,18 +1,7 @@
-// import { useEffect } from "react";
 import "./spinner.css";
-// import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import gif from "../../asset/preloader.gif";
-// import ParticleComponent from "../particle/ParticleComponent";
 
 const Spinner = () => {
-  // const count = useMotionValue(0);
-  // const rounded = useTransform(count, Math.round);
-
-  // useEffect(() => {
-  //   const animation = animate(count, 100, { duration: 12 });
-
-  //   return animation.stop;
-  // }, []);
   return (
     <div
       style={{
@@ -23,11 +12,8 @@ const Spinner = () => {
         background: "#000",
       }}
     >
-      <img src={gif} alt="" />
+      <img width="300" height="300" src={gif} alt="spinner" loading="lazy" />
     </div>
-    // <div className="ss">
-    //   <motion.h1>{rounded}</motion.h1>
-    // </div>
   );
 };
 

@@ -1,0 +1,8 @@
+/* fonts.css */
+
+@font-face {
+    font-family: 'Noto Sans Bengali';
+    src: url('https://fonts.cdnfonts.com/css/noto-sans-bengali') format('woff2');
+    font-display: swap;
+  }
+  
