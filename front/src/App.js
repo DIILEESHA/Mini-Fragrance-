@@ -10,6 +10,7 @@ import About from "./component/about/About";
 import Nav from "./component/nav/Nav";
 import Lgnav from "./component/nav/Lgnav";
 import System from "./component/system/System";
+import Cookie from "./component/cookie/Cookie";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -20,7 +21,7 @@ function App() {
     const fetchData = async () => {
       setTimeout(() => {
         setLoading(false);
-      }, 1000);
+      }, 10000);
     };
 
     fetchData();
@@ -46,12 +47,23 @@ function App() {
         <Spinner />
       ) : (
         <BrowserRouter>
+          <Cookie />
           <Nav />
           <Lgnav isScrolled={scrolling} isHomepage={isHomepage} />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} isScrolled={!scrolling} isHomepage={!isHomepage} />
-            <Route path="/system" element={<System />} isScrolled={!scrolling} isHomepage={!isHomepage} />
+            <Route
+              path="/about"
+              element={<About />}
+              isScrolled={!scrolling}
+              isHomepage={!isHomepage}
+            />
+            <Route
+              path="/system"
+              element={<System />}
+              isScrolled={!scrolling}
+              isHomepage={!isHomepage}
+            />
           </Routes>
         </BrowserRouter>
       )}
