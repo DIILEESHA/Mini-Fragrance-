@@ -5,4 +5,5 @@ export default createClient({
   dataset: "production",
   apiVersion: "2021-10-21", // use a UTC date string
   useCdn: true, // `false` if you want to ensure fresh data
+  authProvider: { projectId: "0q5cvqe1" },
 });

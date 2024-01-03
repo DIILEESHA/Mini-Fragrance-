@@ -55,6 +55,8 @@ const Header = () => {
     <div className="header_container">
       <ParticleComponent isVisible={!showParticles} />
 
+      <Nav />
+      <Lgnav />
       <Slider {...settings}>
         {image &&
           image.map((header, index) => (
