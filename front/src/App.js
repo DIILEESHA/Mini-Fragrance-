@@ -5,10 +5,11 @@ import FetchData from "./component/header/Header";
 import TextComponent from "./component/header/TextComponent";
 import Home from "./component/home/Home";
 import Spinner from "./component/spinner/Spinner";
-import { Routes, Route, BrowserRouter,useLocation } from "react-router-dom";
+import { Routes, Route, BrowserRouter, useLocation } from "react-router-dom";
 import About from "./component/about/About";
 import Nav from "./component/nav/Nav";
 import Lgnav from "./component/nav/Lgnav";
+import System from "./component/system/System";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -19,7 +20,7 @@ function App() {
     const fetchData = async () => {
       setTimeout(() => {
         setLoading(false);
-      }, 10000);
+      }, 100);
     };
 
     fetchData();
@@ -49,7 +50,8 @@ function App() {
           <Lgnav isScrolled={scrolling} isHomepage={isHomepage} />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/about" element={<About />} isScrolled={!scrolling} isHomepage={!isHomepage} />
+            <Route path="/system" element={<System />} isScrolled={!scrolling} isHomepage={!isHomepage} />
           </Routes>
         </BrowserRouter>
       )}
