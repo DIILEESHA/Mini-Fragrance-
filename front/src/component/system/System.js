@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./sys.css";
 import About from "../about/About";
 import sanity from "../Sanity/sanity";
+import { PortableText } from "@portabletext/react";
 
 const System = () => {
   const [system, setSystem] = useState([]);
@@ -17,7 +18,8 @@ const System = () => {
                 url
             },
         },
-        systtitle
+        systtitle,
+        sysbody
 
     }`;
 
@@ -47,6 +49,10 @@ const System = () => {
           >
             {sys?.systtitle}
           </h2>
+
+          <p className="sys_contain">
+            <PortableText value={sys?.sysbody} />
+          </p>
         </div>
       ))}
     </div>
