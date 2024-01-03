@@ -90,7 +90,7 @@ const System = () => {
         <div key={index}>
           <video
             style={{ width: "100%", height: "auto" }}
-            src={sys.videoFile?.asset.url}
+            src={sys?.videoFile?.asset?.url}
             autoPlay
             muted
           ></video>
