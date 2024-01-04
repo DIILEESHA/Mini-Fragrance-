@@ -1,9 +1,15 @@
-import { lazy } from "react";
+import { lazy, useEffect } from "react";
 import "./are.css";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 const ParticleComponent = lazy(() => import("../particle/ParticleComponent"));
+
+gsap.registerPlugin(ScrollTrigger);
 
 const weAre = () => {
   const showParticles = true;
+
+
   return (
     <div className="are_container">
       <ParticleComponent isVisible={showParticles} />
@@ -36,17 +42,17 @@ const weAre = () => {
             </h3>
           </div>
         </div>
-        <div className="are_sub">
+        <div className="are_sub mer">
           <img
-            className="bus"
+            className="bus mg"
             src="https://nullpunkt.co/cdn/shop/files/01_Stills_110.jpg?v=1669921261"
             loading="lazy"
             alt=""
           />
         </div>
-        <div className="are_sub">
+        <div className="are_sub mer">
           <img
-            className="dus"
+            className="dus fg"
             src="https://nullpunkt.co/cdn/shop/files/04_Couple_64.jpg?v=1671625376&width=1500"
             loading="lazy"
             alt=""

@@ -3,8 +3,7 @@ import "./nav.css";
 import { PiShoppingCartSimpleBold } from "react-icons/pi";
 import { MdScreenSearchDesktop } from "react-icons/md";
 import { BsSearchHeart } from "react-icons/bs";
-
-
+import { motion, useScroll, useSpring } from "framer-motion";
 import { Link, NavLink, useLocation } from "react-router-dom";
 
 const Lgnav = ({ isScrolled }) => {
@@ -13,12 +12,20 @@ const Lgnav = ({ isScrolled }) => {
   const isAboutPage = location.pathname === "/about";
   const isSystem = location.pathname === "/system";
 
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
+
   return (
     <div
       className={`lg_nav ${isScrolled ? "scrolled" : ""} ${
         isAboutPage ? "pink" : ""
       }  ${isSystem ? "pink" : ""}`}
     >
+        <motion.div className="progress-bar" style={{ scaleX }} />
       <ul className="lgnav_ul">
         <li className="nav_lg_li">
           <NavLink className="linka" to="/about">

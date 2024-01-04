@@ -27,6 +27,7 @@
 .lg_nav {
   /* position: absolute; */
   background-color: rgba(0, 0, 0, 0);
+  transform-origin: 0%;
   position: fixed;
   top: 33px;
   z-index: 1000;
@@ -38,6 +39,18 @@
   grid-template-columns: 1fr 1fr 1fr;
   place-items: center;
   transition: background-color 0s ease;
+}
+.progress-bar {
+  position: fixed;
+  top: 106px;
+  left: 0;
+  right: 0;
+  height: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 1px solid #afadad;
+  background: #333;
+  transform-origin: 0%;
 }
 
 .lg_nav .pink {

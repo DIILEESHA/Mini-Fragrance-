@@ -5,7 +5,7 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Cookie from "./component/cookie/Cookie";
 import "./fonts/fonts.css";
 import Newsletter from "./component/newsletter/Newsletter";
-
+import { AnimatePresence } from "framer-motion";
 // Dynamically import components using React.lazy for increase the web performance & better user experience
 const Home = lazy(() => import("./component/home/Home"));
 const About = lazy(() => import("./component/about/About"));
@@ -21,7 +21,7 @@ function App() {
     const fetchData = async () => {
       setTimeout(() => {
         setLoading(false);
-      }, 100);
+      }, 10000);
     };
 
     fetchData();
@@ -47,30 +47,32 @@ function App() {
       {loading ? (
         <Spinner />
       ) : (
-        <BrowserRouter>
-          <Cookie />
-          {/* Wrap your lazy-loaded components with Suspense */}
-          <Suspense fallback={<Spinner />}>
-            <Nav />
-            <Lgnav isScrolled={scrolling} isHomepage={isHomepage} />
-            {/* <Newsletter /> */}
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route
-                path="/about"
-                element={<About />}
-                isScrolled={!scrolling}
-                isHomepage={!isHomepage}
-              />
-              <Route
-                path="/system"
-                element={<System />}
-                isScrolled={!scrolling}
-                isHomepage={!isHomepage}
-              />
-            </Routes>
-          </Suspense>
-        </BrowserRouter>
+        <AnimatePresence mode="wait">
+          <BrowserRouter>
+            <Cookie />
+            {/* Wrap your lazy-loaded components with Suspense */}
+            <Suspense fallback={<Spinner />}>
+              <Nav />
+              <Lgnav isScrolled={scrolling} isHomepage={isHomepage} />
+              {/* <Newsletter /> */}
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route
+                  path="/about"
+                  element={<About />}
+                  isScrolled={!scrolling}
+                  isHomepage={!isHomepage}
+                />
+                <Route
+                  path="/system"
+                  element={<System />}
+                  isScrolled={!scrolling}
+                  isHomepage={!isHomepage}
+                />
+              </Routes>
+            </Suspense>
+          </BrowserRouter>
+        </AnimatePresence>
       )}
     </div>
   );

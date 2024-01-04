@@ -5,6 +5,10 @@
   height: 20vh;
   background-color: #fff;
   overflow-y: hidden;
+  margin-left: -20px;
+  transform: rotate(1deg);
+
+  z-index: 1000;
 }
 
 .word h1 {
