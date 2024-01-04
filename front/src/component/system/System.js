@@ -93,7 +93,6 @@ const System = () => {
             style={{ width: "100%", height: "auto" }}
             src={sys?.videoFile?.asset?.url}
             autoPlay
-            muted
           ></video>
 
           <h2 className="system_title">{sys?.systtitle}</h2>
