@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap");
+
+.parallax {
+  overflow: hidden;
+  /* transform: rotate(0.7deg); */
+  letter-spacing: -1px;
+  background-color: #fff;
+  overflow-x: hidden;
+  margin: 10px 0;
+  line-height: 1;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax .scroller {
+  margin: 8px;
+  color: transparent;
+  font-size: 3em;
+  /* margin: 30px auto; */
+  text-transform: uppercase;
+  font-weight: 400;
+  font-family: "Raleway";
+  -webkit-text-stroke-width: 2.5px;
+  -webkit-text-stroke-color: #000;
+  text-transform: uppercase;
+  display: flex;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax span {
+  display: block;
+  margin-right: 30px;
+}

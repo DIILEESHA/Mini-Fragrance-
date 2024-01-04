@@ -27,12 +27,12 @@ const Lgnav = ({ isScrolled }) => {
     >
         <motion.div className="progress-bar" style={{ scaleX }} />
       <ul className="lgnav_ul">
-        <li className="nav_lg_li">
+        <li className="nav_lg_li bk">
           <NavLink className="linka" to="/about">
             about
           </NavLink>
         </li>
-        <li className="nav_lg_li">
+        <li className="nav_lg_li bk">
           <NavLink className="linka" to="/system">
             system
           </NavLink>
@@ -52,7 +52,7 @@ const Lgnav = ({ isScrolled }) => {
         </li>
       </ul>
       <ul className="lgnav_ul">
-        <li className="nav_lg_li">shop</li>
+        <li className="nav_lg_li bk">shop</li>
         <li className="nav_lg_li">
           <BsSearchHeart className="ico"/>
         </li>

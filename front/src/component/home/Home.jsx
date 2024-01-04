@@ -3,6 +3,9 @@ import "./home.css";
 import Header from "../header/Header";
 import WeAre from "../who/WeAre";
 import Word from "../word/Word";
+import Headershop from "../headershop/Headershop";
+import Section from "../velo/Section";
+import Mini from "../velo/Mini";
 
 const Home = () => {
   return (
@@ -10,8 +13,9 @@ const Home = () => {
       <Header />
       <Word />
       <WeAre />
-      <Word />
-
+      <Section />
+      <Headershop />
+      {/* <Word /> */}
     </div>
   );
 };

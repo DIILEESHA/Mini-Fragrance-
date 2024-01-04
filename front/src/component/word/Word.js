@@ -33,8 +33,8 @@ const AnimatedText = () => {
     <div className="word">
       <div id="scrollingText" className="animated-text-container">
         <h1>
-          formex functional fragrance shop now ♥ formex functional fragrance
-          shop now ♥ formex functional fragrance shop now ♥{" "}
+          formex functional✨ fragrance🍜 shop now ♥ formex functional✨ fragrance
+          shop now ♥ formex functional✨ fragrance shop now ♥{" "}
         </h1>
       </div>
     </div>
