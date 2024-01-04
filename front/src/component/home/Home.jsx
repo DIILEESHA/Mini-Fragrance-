@@ -13,7 +13,6 @@ const Home = () => {
       <Header />
       <Word />
       <WeAre />
-      <Section />
       <Headershop />
       {/* <Word /> */}
     </div>

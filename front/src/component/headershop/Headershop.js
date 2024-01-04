@@ -1,69 +1,125 @@
-import React, { Component } from "react";
+import React, { useEffect, useState } from "react";
+import Slider from "react-slick";
+import "./headershop.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
+import Section from "../velo/Section";
+import sanity from "../Sanity/sanity";
+import { PrevArrow, NextArrow } from "../header/CustomArrow";
 
-export default class CenterMode extends Component {
-  render() {
-    const settings = {
-      className: "center",
-      dots:true,
-      centerMode: true,
-      infinite: true,
-      centerPadding: "50px",
-      slidesToShow: 3,
-      speed: 500,
-      autoplay: true,
-      rtl: true,
+export default function Headershop() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const productQuery = `*[_type == "product"]{
+          productTitle,
+          productimg1 { asset->{ _id, url }},
+          productimg2 { asset->{ _id, url }},
+          productimg3 { asset->{ _id, url }},
+          productimg4 { asset->{ _id, url }},
+        }`;
+
+        const res = await sanity.fetch(productQuery);
+
+        setProducts(res);
+        console.log(res);
+      } catch (error) {
+        console.log(error);
+      }
     };
-    return (
-      <div style={{ height: "60vh", padding: "50px" }}>
-        <h2>Center Mode</h2>
-        <Slider style={{ display: "flex", gap: "30px" }} {...settings}>
-          <div className="card" style={{ height: "50vh", width: "50vw" }}>
-            <img
-              style={{ height: "100%", width: "100%" }}
-              src="https://tse2.mm.bing.net/th?id=OIP.y8OtbqFS6BB80Rjb2T6xtAAAAA&pid=Api&P=0&h=220"
-              alt=""
-            />
-          </div>{" "}
-          <div className="card" style={{ height: "50vh", width: "50vw" }}>
-            <img
-              style={{ height: "100%", width: "100%" }}
-              src="https://tse2.mm.bing.net/th?id=OIP.y8OtbqFS6BB80Rjb2T6xtAAAAA&pid=Api&P=0&h=220"
-              alt=""
-            />
-          </div>{" "}
-          <div className="card" style={{ height: "50vh", width: "50vw" }}>
-            <img
-              style={{ height: "100%", width: "100%" }}
-              src="https://tse2.mm.bing.net/th?id=OIP.y8OtbqFS6BB80Rjb2T6xtAAAAA&pid=Api&P=0&h=220"
-              alt=""
-            />
-          </div>{" "}
-          <div className="card" style={{ height: "50vh", width: "50vw" }}>
-            <img
-              style={{ height: "100%", width: "100%" }}
-              src="https://tse2.mm.bing.net/th?id=OIP.y8OtbqFS6BB80Rjb2T6xtAAAAA&pid=Api&P=0&h=220"
-              alt=""
-            />
-          </div>{" "}
-          <div className="card" style={{ height: "50vh", width: "50vw" }}>
-            <img
-              style={{ height: "100%", width: "100%" }}
-              src="https://tse2.mm.bing.net/th?id=OIP.y8OtbqFS6BB80Rjb2T6xtAAAAA&pid=Api&P=0&h=220"
-              alt=""
-            />
-          </div>{" "}
-          <div className="card" style={{ height: "50vh", width: "50vw" }}>
-            <img
-              style={{ height: "100%", width: "100%" }}
-              src="https://tse2.mm.bing.net/th?id=OIP.y8OtbqFS6BB80Rjb2T6xtAAAAA&pid=Api&P=0&h=220"
-              alt=""
-            />
-          </div>
+    fetchProducts();
+  }, []);
+
+  const mainSliderSettings = {
+    dots: false,
+    speed: 1900,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplaySpeed: 3200,
+    className: "center",
+    centerMode: true,
+    infinite: true,
+    centerPadding: "60px",
+    cssEase: "linear",
+    autoplay: true,
+    rtl: true,
+    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
+    className: "custom-slider",
+  };
+
+  const individualCardSliderSettings = {
+    dots: true,
+    speed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplaySpeed: 1,
+    arrows: false,
+    autoplay: false,
+    customPaging: (i) => (
+      <div className="custom-dot" key={i}>
+        {/* You can customize the dot content here */}
+        {/* {i + 1} */}
+        {/* x */}
+      </div>
+    ),
+  };
+
+  return (
+    <div className="main_headershop">
+      <Section />
+      <div className="mainer">
+        <Slider {...mainSliderSettings}>
+          {products &&
+            products.map((header, index) => (
+              <div key={index} className="">
+                <div className="">
+                  <Slider {...individualCardSliderSettings}>
+                    {/* Show all four product images for each product */}
+                    {header.productimg1 && (
+                      <div className="sub_shop" key={`main-${index}-img1`}>
+                        <img
+                          src={header.productimg1.asset.url}
+                          alt={header.productTitle}
+                          loading="lazy"
+                        />
+                      </div>
+                    )}
+                    {header.productimg2 && (
+                      <div className="sub_shop" key={`main-${index}-img2`}>
+                        <img
+                          src={header.productimg2.asset.url}
+                          alt={header.productTitle}
+                          loading="lazy"
+                        />
+                      </div>
+                    )}
+                    {header.productimg3 && (
+                      <div className="sub_shop" key={`main-${index}-img3`}>
+                        <img
+                          src={header.productimg3.asset.url}
+                          alt={header.productTitle}
+                          loading="lazy"
+                        />
+                      </div>
+                    )}
+                    {header.productimg4 && (
+                      <div className="sub_shop" key={`main-${index}-img4`}>
+                        <img
+                          src={header.productimg4.asset.url}
+                          alt={header.productTitle}
+                          loading="lazy"
+                        />
+                      </div>
+                    )}
+                  </Slider>
+                </div>
+              </div>
+            ))}
         </Slider>
       </div>
-    );
-  }
+    </div>
+  );
 }

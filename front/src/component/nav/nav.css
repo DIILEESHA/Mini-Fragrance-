@@ -43,14 +43,14 @@
 }
 .progress-bar {
   position: fixed;
-  top: 106px;
+  top: 110px;
   left: 0;
   right: 0;
   height: 5px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  border: 1px solid #afadad;
-  background: #333;
+  border: 1px solid #fff;
+  background: #5c5b5b;
   transform-origin: 0%;
 }
 

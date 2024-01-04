@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./sys.css";
-import '../who/are.css'
+import "../who/are.css";
 import sanity from "../Sanity/sanity";
 import { PortableText } from "@portabletext/react";
+import Headershop from "../headershop/Headershop";
 
 const System = () => {
   const [system, setSystem] = useState([]);
@@ -164,6 +165,7 @@ const System = () => {
               <img className="dus" src={sys?.sysimage9?.asset?.url} alt="" />
             </div>
           </div>
+          <Headershop />
         </div>
       ))}
     </div>

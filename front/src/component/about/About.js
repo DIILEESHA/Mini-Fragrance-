@@ -4,6 +4,7 @@ import ParticleComponent from "../particle/ParticleComponent";
 import sanity from "../Sanity/sanity";
 import { PortableText } from "@portabletext/react";
 import { BlockContent } from "@sanity/block-content-to-react";
+import Headershop from "../headershop/Headershop";
 
 const About = ({ isScrolled }) => {
   const [about, setAbout] = useState([]);
@@ -102,6 +103,7 @@ const About = ({ isScrolled }) => {
                 <PortableText value={about?.body} />
               </p>
             </div>
+            <Headershop />
           </div>
         ))}
     </div>

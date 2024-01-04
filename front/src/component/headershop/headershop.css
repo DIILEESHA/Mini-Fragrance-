@@ -1,0 +1,67 @@
+.main_headershop {
+  /* padding: 5px; */
+  background-color: rgb(243, 241, 241);
+  /* display: flex; */
+}
+.mainer {
+  height: 80vh;
+}
+
+.shop_flex {
+  /* margin: 60px 0; */
+  /* border: 1px solid #333; */
+  margin: 10px;
+  /* width: 500px; */
+  /* flex-wrap: nowrap; */
+  /* display: grid; */
+  /* grid-template-columns: repeat(3, 1fr); */
+  width: 100%;
+}
+
+.sub_shop {
+  height: 70vh;
+  width: 100%;
+  position: relative;
+  /* display: flex; */
+  /* gap: 10px; */
+  /* border: 1px solid #333; */
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.custom-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #fff; /* Customize the color */
+  margin: 0 auto;
+  cursor: pointer;
+  padding: 3px;
+}
+
+.slick-next {
+  display: none;
+}
+
+.sub_shop img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.slick-list {
+  /* margin: 0 -27px; */
+}
+
+.custom-slider .slick-slide > div {
+  margin: 0 4px;
+}
