@@ -5,10 +5,10 @@ const Cookie = () => {
   return (
     <div className="cooker">
       <CookieConsent
-        enableDeclineButton
         // location="bottom"
         buttonText="Accept All Cookies"
-        declineButtonText="Nope"
+        declineButtonText="🇽"
+        enableDeclineButton
         cookieName="myAwesomeCookieName2"
         className="containerClasses"
         style={{
@@ -24,16 +24,6 @@ const Cookie = () => {
           alignItems: "center",
           justifyContent: "center",
         }}
-        declineButtonStyle={{
-          color: "#fff",
-          fontSize: "13px",
-          background: "transparent",
-          border: "1px solid #fff",
-          fontWeight: "bold",
-          borderRadius: "0%",
-          paddingInline: "10px",
-          display: "none",
-        }}
         buttonStyle={{
           color: "#000",
           fontSize: "13px",
@@ -42,6 +32,16 @@ const Cookie = () => {
           fontWeight: "500",
           borderRadius: "3px",
           paddingInline: "10px",
+        }}
+        declineButtonStyle={{
+          color: "#fff",
+          fontSize: "13px",
+          background: "#fff",
+          border: "1px solid #fff",
+          fontWeight: "bold",
+          borderRadius: "0%",
+          paddingInline: "10px",
+          display: "none",
         }}
         expires={150}
       >

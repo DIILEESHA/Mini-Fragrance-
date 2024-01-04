@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap");
+
+.word {
+  overflow-x: hidden;
+  height: 20vh;
+  background-color: #fff;
+  overflow-y: hidden;
+}
+
+.word h1 {
+  /* position: absolute; */
+  color: transparent;
+  width: 400vw;
+  font-size: 3.5em;
+  margin: 30px auto;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-family: "Raleway";
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #807c7c;
+}

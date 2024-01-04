@@ -4,8 +4,9 @@ import Spinner from "./component/spinner/Spinner";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Cookie from "./component/cookie/Cookie";
 import "./fonts/fonts.css";
+import Newsletter from "./component/newsletter/Newsletter";
 
-// Dynamically import your components using React.lazy
+// Dynamically import components using React.lazy for increase the web performance & better user experience
 const Home = lazy(() => import("./component/home/Home"));
 const About = lazy(() => import("./component/about/About"));
 const Nav = lazy(() => import("./component/nav/Nav"));
@@ -18,10 +19,9 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      // Simulate data fetching delay
       setTimeout(() => {
         setLoading(false);
-      }, 3000);
+      }, 100);
     };
 
     fetchData();
@@ -53,6 +53,7 @@ function App() {
           <Suspense fallback={<Spinner />}>
             <Nav />
             <Lgnav isScrolled={scrolling} isHomepage={isHomepage} />
+            {/* <Newsletter /> */}
             <Routes>
               <Route path="/" element={<Home />} />
               <Route

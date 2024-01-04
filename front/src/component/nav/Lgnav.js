@@ -4,6 +4,7 @@ import { PiShoppingCartSimpleBold } from "react-icons/pi";
 import { MdScreenSearchDesktop } from "react-icons/md";
 import { BsSearchHeart } from "react-icons/bs";
 
+
 import { Link, NavLink, useLocation } from "react-router-dom";
 
 const Lgnav = ({ isScrolled }) => {
@@ -50,6 +51,7 @@ const Lgnav = ({ isScrolled }) => {
         </li>
 
         <li className="nav_lg_li">EN | SIN</li>
+        
       </ul>
     </div>
   );
