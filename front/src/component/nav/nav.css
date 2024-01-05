@@ -1,6 +1,5 @@
 .nav_container {
   /* position: relative; */
-
   overflow: hidden;
   overflow-x: hidden;
 }
@@ -15,7 +14,7 @@
   /* letter-spacing: 1.1px; */
   background-color: #0f0f0f;
   /* background-color:teal; */
-
+  
   color: #fff;
   font-size: 13px;
   text-align: center;
@@ -31,7 +30,7 @@
   transform-origin: 0%;
   position: fixed;
   top: 33px;
-  z-index: 1000;
+  z-index: 10000000000000000000000000;
   height: 80px;
   /* display: flex; */
   width: 100%;

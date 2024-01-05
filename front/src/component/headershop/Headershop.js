@@ -54,6 +54,7 @@ export default function Headershop() {
   const individualCardSliderSettings = {
     dots: true,
     speed: 1000,
+    fade: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplaySpeed: 1,

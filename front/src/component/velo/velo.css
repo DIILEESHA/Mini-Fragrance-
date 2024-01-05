@@ -6,7 +6,7 @@
   letter-spacing: -1px;
   /* background-color: #fff; */
   background-color: rgb(243, 241, 241);
-
+z-index: 1000;
   overflow-x: hidden;
   margin: 10px 0;
   line-height: 1;
