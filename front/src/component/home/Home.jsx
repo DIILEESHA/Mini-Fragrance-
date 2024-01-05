@@ -6,6 +6,7 @@ import Word from "../word/Word";
 import Headershop from "../headershop/Headershop";
 import Section from "../velo/Section";
 import Mini from "../velo/Mini";
+import Parallaxd from "../paralax/Parallaxd";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Header />
       <Word />
       <WeAre />
+      <Parallaxd />
       <Headershop />
       {/* <Word /> */}
     </div>
