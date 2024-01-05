@@ -17,7 +17,7 @@ const Newsletter = lazy(() => import("./component/newsletter/Newsletter"));
 function App() {
   const [loading, setLoading] = useState(true);
   const [scrolling, setScrolling] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
+  const [showPopup, setShowPopup] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -50,7 +50,7 @@ function App() {
   }, [window.location.pathname]);
 
   const closePopup = () => {
-    setShowPopup(true);
+    setShowPopup(false);
   };
 
   return (
@@ -61,7 +61,7 @@ function App() {
         <AnimatePresence mode="wait">
           <BrowserRouter>
             <Cookie />
-            {/* {showPopup && <Newsletter closePopup={closePopup} />} */}
+            {showPopup && <Newsletter closePopup={closePopup} />}
             {/* Wrap your lazy-loaded components with Suspense */}
             <Suspense fallback={<Spinner />}>
               <Nav />

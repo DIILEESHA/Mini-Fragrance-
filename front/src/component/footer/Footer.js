@@ -19,16 +19,22 @@ const Footer = () => {
   const onTestClick = (e) => {
     e.preventDefault();
 
-    // Check if the email is empty
     if (!email.trim()) {
-      // Show an error message or take appropriate action
-      toast.error("Email address cannot be empty");
+      <h1>email cannot be empty</h1>;
+      toast.error("Email address cannot be empty", {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       return;
     }
 
-    // If the email is not empty, proceed with sending the email
     notify();
-    // Additional logic to send the email can be added here
   };
   return (
     <div className="footer_container">
@@ -129,7 +135,7 @@ const Footer = () => {
                 placeholder="Email address"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                required
+                // required
               />
               <div className="inputer">
                 <button type="submit">sign up</button>
