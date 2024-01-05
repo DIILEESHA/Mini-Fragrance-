@@ -9,6 +9,7 @@ import { AnimatePresence } from "framer-motion";
 const Home = lazy(() => import("./component/home/Home"));
 const About = lazy(() => import("./component/about/About"));
 const Nav = lazy(() => import("./component/nav/Nav"));
+const Footer = lazy(() => import("./component/footer/Footer"));
 const Lgnav = lazy(() => import("./component/nav/Lgnav"));
 const System = lazy(() => import("./component/system/System"));
 const Newsletter = lazy(() => import("./component/newsletter/Newsletter"));
@@ -16,13 +17,13 @@ const Newsletter = lazy(() => import("./component/newsletter/Newsletter"));
 function App() {
   const [loading, setLoading] = useState(true);
   const [scrolling, setScrolling] = useState(false);
-  const [showPopup, setShowPopup] = useState(true);
+  const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
       setTimeout(() => {
         setLoading(false);
-      }, 3000);
+      }, 0);
     };
 
     fetchData();
@@ -46,15 +47,10 @@ function App() {
   useEffect(() => {
     // Show the popup only on the home page
     setShowPopup(window.location.pathname === "/");
-  }, [window.location.pathname]
-  
-  
-  
-  
-  );
+  }, [window.location.pathname]);
 
   const closePopup = () => {
-    setShowPopup(false);
+    setShowPopup(true);
   };
 
   return (
@@ -65,7 +61,7 @@ function App() {
         <AnimatePresence mode="wait">
           <BrowserRouter>
             <Cookie />
-            {showPopup && <Newsletter closePopup={closePopup} />}
+            {/* {showPopup && <Newsletter closePopup={closePopup} />} */}
             {/* Wrap your lazy-loaded components with Suspense */}
             <Suspense fallback={<Spinner />}>
               <Nav />
@@ -86,6 +82,7 @@ function App() {
                   isHomepage={!isHomepage}
                 />
               </Routes>
+              <Footer />
             </Suspense>
           </BrowserRouter>
         </AnimatePresence>

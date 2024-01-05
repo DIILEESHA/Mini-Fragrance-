@@ -111,12 +111,12 @@ export default function Headershop() {
                     )}
                   </Slider>
 
+                  <h4 className="price">{header.productprice}</h4>
                   <h3 className="shop_title">
                     <div className="arrower" />
 
                     {header.productTitle}
                   </h3>
-                  <h4 className="price">{header.productprice}</h4>
                 </div>
               </div>
             ))}

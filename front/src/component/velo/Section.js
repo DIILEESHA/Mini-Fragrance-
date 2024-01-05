@@ -6,7 +6,7 @@ import Velo from "./Velo";
 function ParallaxSection() {
   return (
     <section>
-      <Velo style={{ fontSize: "50px" }} baseVelocity={1}>
+      <Velo style={{ fontSize: "50px" }} baseVelocity={0.5}>
       formex functional✨shop now
       </Velo>
       {/* <Velo style={{ fontSize: "50px" }} baseVelocity={2}>

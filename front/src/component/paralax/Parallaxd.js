@@ -11,7 +11,7 @@ const Parallaxd = () => {
   return (
     <div>
       <Parallax
-        strength={170}
+        strength={270}
         className="bgClassName"
         bgImage={
           "https://nullpunkt.co/cdn/shop/files/04_Couple_169_2.jpg?v=1669921149&width=1500"
@@ -21,7 +21,7 @@ const Parallaxd = () => {
           <div className="sub_content">
             <h5>NEW COLLECTION✨</h5>
             <h1>Be different in your own way!</h1>
-            <h2>Find your unique style.</h2>
+            <h2>Find your unique Fragrance.</h2>
 
             <Link className="linka" to="/shop">
               <button onClick={handleClicks}>shop collection🍜</button>

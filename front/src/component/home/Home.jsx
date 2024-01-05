@@ -14,9 +14,13 @@ const Home = () => {
       <Header />
       <Word />
       <WeAre />
+      {/* <Parallaxd /> */}
       <Parallaxd />
       <Headershop />
+      {/* <Headershop /> */}
+
       {/* <Word /> */}
+      {/* <Section/> */}
     </div>
   );
 };

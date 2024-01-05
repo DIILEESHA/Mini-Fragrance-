@@ -26,7 +26,8 @@ const Lgnav = ({ isScrolled }) => {
       }  ${isSystem ? "pink" : ""}`}
     >
       <motion.div className="progress-bar" style={{ scaleX }} />
-      <ul className="lgnav_ul">
+   <div className="left">
+   <ul className="lgnav_ul">
         <li className="nav_lg_li bk">
           <NavLink className="linka" to="/about">
             about
@@ -41,7 +42,9 @@ const Lgnav = ({ isScrolled }) => {
           <PiShoppingCartSimpleBold className="ico" />
         </li>
       </ul>
-      <ul className="lgnav_ul">
+   </div>
+     <div className="middle">
+     <ul className="lgnav_ul">
         <li className="nav_lg_li">
           <div className="casper">
             <Link className="linka" to="/">
@@ -51,7 +54,9 @@ const Lgnav = ({ isScrolled }) => {
           </div>
         </li>
       </ul>
-      <ul className="lgnav_ul">
+     </div>
+  <div className="right">
+  <ul className="lgnav_ul">
         <li className="nav_lg_li bk">shop</li>
         <li className="nav_lg_li">
           <BsSearchHeart className="ico" />
@@ -59,6 +64,7 @@ const Lgnav = ({ isScrolled }) => {
 
         <li className="nav_lg_li">EN | SIN</li>
       </ul>
+  </div>
     </div>
   );
 };

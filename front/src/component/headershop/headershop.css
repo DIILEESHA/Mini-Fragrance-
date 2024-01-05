@@ -6,7 +6,7 @@
   /* display: flex; */
 }
 .mainer {
-  padding: 10px 0 50px 0;
+  padding: 10px 0 80px 0;
   /* height: 80vh; */
 }
 
@@ -46,7 +46,8 @@
 }
 
 .sub_shop {
-  height: 70vh;
+  height: 80vh;
+  border-radius: 10px;
   width: 100%;
   position: relative;
 }
@@ -60,6 +61,8 @@ ul.slick-dots {
 .sub_shop img {
   height: 100%;
   position: relative;
+  border-radius: 10px;
+
   width: 100%;
   object-fit: cover;
 }
