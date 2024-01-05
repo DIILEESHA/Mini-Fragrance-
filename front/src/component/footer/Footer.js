@@ -1,7 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import "./footer.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const notify = () =>
+    toast.success("Great! You're all set! Cheers!", {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  const onTestClick = (e) => {
+    e.preventDefault();
+
+    // Check if the email is empty
+    if (!email.trim()) {
+      // Show an error message or take appropriate action
+      toast.error("Email address cannot be empty");
+      return;
+    }
+
+    // If the email is not empty, proceed with sending the email
+    notify();
+    // Additional logic to send the email can be added here
+  };
   return (
     <div className="footer_container">
       <div className="footer_grid">
@@ -93,16 +121,22 @@ const Footer = () => {
         <div className="footer_sub">
           {" "}
           <div className="kj">Subscribe to our Newsletter.</div>
-          <form className="footer_input_section">
+          <form onSubmit={onTestClick} className="footer_input_section">
             <div className="kl">
               <input
                 type="email"
                 className="footer_input"
                 placeholder="Email address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 required
               />
               <div className="inputer">
-                <button>sign up</button>
+                <button type="submit">sign up</button>
+
+                <div style={{ zIndex: "100000" }}>
+                  <ToastContainer />
+                </div>
               </div>
             </div>
 
@@ -177,7 +211,9 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-        <h1 className="copyt">Copyright ©2024 All rights reserved | Made by DILEESHA</h1>
+      <h1 className="copyt">
+        Copyright ©2024 All rights reserved | Made by DILEESHA
+      </h1>
     </div>
   );
 };
