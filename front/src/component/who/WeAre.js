@@ -9,7 +9,6 @@ gsap.registerPlugin(ScrollTrigger);
 const weAre = () => {
   const showParticles = true;
 
-
   return (
     <div className="are_container">
       <ParticleComponent isVisible={showParticles} />
@@ -92,6 +91,7 @@ const weAre = () => {
         </div>
       </div>
 
+      <div style={{ marginBottom: "40px" }}></div>
       <div className="second_image">
         <img
           className="triple"
