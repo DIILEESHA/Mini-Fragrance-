@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./bout.css";
+import "../who/are.css";
 import ParticleComponent from "../particle/ParticleComponent";
 import sanity from "../Sanity/sanity";
 import { PortableText } from "@portabletext/react";
@@ -55,57 +56,48 @@ const About = ({ isScrolled }) => {
 
   return (
     <div className="are_container about">
-      {Array.isArray(about) &&
-        about.map((about, index) => (
-          <div key={index}>
-            <div className="are_grid">
-              <div className="are_sub">
-                <img
-                  className="bus"
-                  src={about?.mainimage?.asset?.url}
-                  alt=""
-                />
-              </div>
+      {about.map((about, index) => (
+        <div key={index}>
+          <div className="are_grid">
+            <div className="are_sub">
+              <img className="bus" src={about?.mainimage?.asset?.url} alt="" />
+            </div>
 
-              <div className="are_sub">
-                <div className="are_detail">
-                  <h2 className="detail_title">{about?.abouttitle}</h2>
-                  <p className="detail_para">
-                    <PortableText value={about?.body1} />
-                  </p>
-                </div>
-              </div>
-
-              <div className="are_sub">
-                <div className="are_detail">
-                  <h2 className="detail_title">{about?.abouttitle2}</h2>
-                  <p className="detail_para">
-                    <PortableText value={about?.body2} />
-                  </p>
-                </div>
-              </div>
-              <div className="are_sub">
-                <img
-                  className="dus"
-                  src={about?.mainimage2?.asset?.url}
-                  alt=""
-                />
+            <div className="are_sub">
+              <div className="are_detail">
+                <h2 className="detail_title">{about?.abouttitle}</h2>
+                <p className="detail_para">
+                  <PortableText value={about?.body1} />
+                </p>
               </div>
             </div>
 
-            <div className="second_image">
-              <img
-                className="triple"
-                src={about?.mainimage3?.asset?.url}
-                alt=""
-              />
-              <p className="detail_para">
-                <PortableText value={about?.body} />
-              </p>
+            <div className="are_sub">
+              <div className="are_detail">
+                <h2 className="detail_title">{about?.abouttitle2}</h2>
+                <p className="detail_para">
+                  <PortableText value={about?.body2} />
+                </p>
+              </div>
             </div>
-            <Headershop />
+            <div className="are_sub">
+              <img className="dus" src={about?.mainimage2?.asset?.url} alt="" />
+            </div>
           </div>
-        ))}
+
+          <div className="second_image">
+            <img
+              className="triple"
+              src={about?.mainimage3?.asset?.url}
+              alt=""
+            />
+            <p className="detail_para">
+              <PortableText value={about?.body} />
+            </p>
+          </div>
+          <Headershop />
+        </div>
+      ))}
     </div>
   );
 };

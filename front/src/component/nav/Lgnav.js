@@ -16,7 +16,7 @@ const Lgnav = ({ isScrolled }) => {
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
-    restDelta: 0.001
+    restDelta: 0.001,
   });
 
   return (
@@ -25,7 +25,7 @@ const Lgnav = ({ isScrolled }) => {
         isAboutPage ? "pink" : ""
       }  ${isSystem ? "pink" : ""}`}
     >
-        <motion.div className="progress-bar" style={{ scaleX }} />
+      <motion.div className="progress-bar" style={{ scaleX }} />
       <ul className="lgnav_ul">
         <li className="nav_lg_li bk">
           <NavLink className="linka" to="/about">
@@ -38,7 +38,7 @@ const Lgnav = ({ isScrolled }) => {
           </NavLink>
         </li>
         <li className="nav_lg_li">
-          <PiShoppingCartSimpleBold className="ico"/>
+          <PiShoppingCartSimpleBold className="ico" />
         </li>
       </ul>
       <ul className="lgnav_ul">
@@ -54,11 +54,10 @@ const Lgnav = ({ isScrolled }) => {
       <ul className="lgnav_ul">
         <li className="nav_lg_li bk">shop</li>
         <li className="nav_lg_li">
-          <BsSearchHeart className="ico"/>
+          <BsSearchHeart className="ico" />
         </li>
 
         <li className="nav_lg_li">EN | SIN</li>
-        
       </ul>
     </div>
   );

@@ -22,7 +22,7 @@ function App() {
     const fetchData = async () => {
       setTimeout(() => {
         setLoading(false);
-      }, 10);
+      }, 3000);
     };
 
     fetchData();
@@ -42,6 +42,16 @@ function App() {
   }, []);
 
   const isHomepage = window.location.pathname === "/";
+
+  useEffect(() => {
+    // Show the popup only on the home page
+    setShowPopup(window.location.pathname === "/");
+  }, [window.location.pathname]
+  
+  
+  
+  
+  );
 
   const closePopup = () => {
     setShowPopup(false);

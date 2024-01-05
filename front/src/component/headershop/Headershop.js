@@ -60,13 +60,6 @@ export default function Headershop() {
     autoplaySpeed: 1,
     arrows: false,
     autoplay: false,
-    customPaging: (i) => (
-      <div className="custom-dot" key={i}>
-        {/* You can customize the dot content here */}
-        {/* {i + 1} */}
-        {/* x */}
-      </div>
-    ),
   };
 
   return (
