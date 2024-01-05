@@ -19,6 +19,7 @@ export default function Headershop() {
           productimg2 { asset->{ _id, url }},
           productimg3 { asset->{ _id, url }},
           productimg4 { asset->{ _id, url }},
+          productprice
         }`;
 
         const res = await sanity.fetch(productQuery);
@@ -77,13 +78,13 @@ export default function Headershop() {
               <div key={index} className="">
                 <div className="">
                   <Slider {...individualCardSliderSettings}>
-                    {/* Show all four product images for each product */}
                     {header.productimg1 && (
                       <div className="sub_shop" key={`main-${index}-img1`}>
                         <img
                           src={header.productimg1.asset.url}
                           alt={header.productTitle}
                           loading="lazy"
+                          title={header.productTitle}
                         />
                       </div>
                     )}
@@ -115,6 +116,13 @@ export default function Headershop() {
                       </div>
                     )}
                   </Slider>
+
+                  <h3 className="shop_title">
+                    <div className="arrower" />
+
+                    {header.productTitle}
+                  </h3>
+                  <h4 className="price">{header.productprice}</h4>
                 </div>
               </div>
             ))}
