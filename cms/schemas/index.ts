@@ -5,5 +5,6 @@ import author from './author'
 import header from './header'
 import about from './about'
 import system from './system'
+import product from './product'
 
-export const schemaTypes = [post, author, category, blockContent, header, about, system]
+export const schemaTypes = [post, author, category, blockContent, header, about, system, product]
