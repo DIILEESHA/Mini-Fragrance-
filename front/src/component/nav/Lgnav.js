@@ -4,13 +4,16 @@ import { PiShoppingCartSimpleBold } from "react-icons/pi";
 import { MdScreenSearchDesktop } from "react-icons/md";
 import { BsSearchHeart } from "react-icons/bs";
 import { motion, useScroll, useSpring } from "framer-motion";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation, useParams } from "react-router-dom";
 
 const Lgnav = ({ isScrolled }) => {
   const location = useLocation();
-  const isHomepage = location.pathname === "/";
+
+  const { index } = useParams();
+
   const isAboutPage = location.pathname === "/about";
   const isSystem = location.pathname === "/system";
+  const isSingle =  location.pathname.includes("/product/");
 
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -23,48 +26,48 @@ const Lgnav = ({ isScrolled }) => {
     <div
       className={`lg_nav ${isScrolled ? "scrolled" : ""} ${
         isAboutPage ? "pink" : ""
-      }  ${isSystem ? "pink" : ""}`}
+      }  ${isSystem ? "pink" : ""} ${isSingle ? "pink" : ""}`}
     >
       <motion.div className="progress-bar" style={{ scaleX }} />
-   <div className="left">
-   <ul className="lgnav_ul">
-        <li className="nav_lg_li bk">
-          <NavLink className="linka" to="/about">
-            about
-          </NavLink>
-        </li>
-        <li className="nav_lg_li bk">
-          <NavLink className="linka" to="/system">
-            system
-          </NavLink>
-        </li>
-        <li className="nav_lg_li">
-          <PiShoppingCartSimpleBold className="ico" />
-        </li>
-      </ul>
-   </div>
-     <div className="middle">
-     <ul className="lgnav_ul">
-        <li className="nav_lg_li">
-          <div className="casper">
-            <Link className="linka" to="/">
-              <h4 className="duta">formex</h4>
-              <h5 className="meeba">functional fragrances</h5>
-            </Link>
-          </div>
-        </li>
-      </ul>
-     </div>
-  <div className="right">
-  <ul className="lgnav_ul">
-        <li className="nav_lg_li bk">shop</li>
-        <li className="nav_lg_li">
-          <BsSearchHeart className="ico" />
-        </li>
+      <div className="left">
+        <ul className="lgnav_ul">
+          <li className="nav_lg_li bk">
+            <NavLink className="linka" to="/about">
+              about
+            </NavLink>
+          </li>
+          <li className="nav_lg_li bk">
+            <NavLink className="linka" to="/system">
+              system
+            </NavLink>
+          </li>
+          <li className="nav_lg_li">
+            <PiShoppingCartSimpleBold className="ico" />
+          </li>
+        </ul>
+      </div>
+      <div className="middle">
+        <ul className="lgnav_ul">
+          <li className="nav_lg_li">
+            <div className="casper">
+              <Link className="linka" to="/">
+                <h4 className="duta">nullpunkt</h4>
+                <h5 className="meeba">functional fragrances</h5>
+              </Link>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div className="right">
+        <ul className="lgnav_ul">
+          <li className="nav_lg_li bk">shop</li>
+          <li className="nav_lg_li">
+            <BsSearchHeart className="ico" />
+          </li>
 
-        <li className="nav_lg_li">EN | SIN</li>
-      </ul>
-  </div>
+          <li className="nav_lg_li">EN | SIN</li>
+        </ul>
+      </div>
     </div>
   );
 };

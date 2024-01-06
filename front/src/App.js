@@ -5,7 +5,7 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Cookie from "./component/cookie/Cookie";
 import "./fonts/fonts.css";
 import { AnimatePresence } from "framer-motion";
-// Dynamically import components using React.lazy for increase the web performance & better user experience
+import Singleproduct from "./component/single/Singleproduct";
 const Home = lazy(() => import("./component/home/Home"));
 const About = lazy(() => import("./component/about/About"));
 const Nav = lazy(() => import("./component/nav/Nav"));
@@ -13,6 +13,7 @@ const Footer = lazy(() => import("./component/footer/Footer"));
 const Lgnav = lazy(() => import("./component/nav/Lgnav"));
 const System = lazy(() => import("./component/system/System"));
 const Newsletter = lazy(() => import("./component/newsletter/Newsletter"));
+const single = lazy(() => import("./component/single/Singleproduct"));
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -23,7 +24,7 @@ function App() {
     const fetchData = async () => {
       setTimeout(() => {
         setLoading(false);
-      }, 0);
+      }, 10);
     };
 
     fetchData();
@@ -56,12 +57,13 @@ function App() {
   return (
     <div className="App">
       {loading ? (
+        // ""
         <Spinner />
       ) : (
         <AnimatePresence mode="wait">
           <BrowserRouter>
             <Cookie />
-            {showPopup && <Newsletter closePopup={closePopup} />}
+            {/* {showPopup && <Newsletter closePopup={closePopup} />} */}
             {/* Wrap your lazy-loaded components with Suspense */}
             <Suspense fallback={<Spinner />}>
               <Nav />
@@ -81,6 +83,7 @@ function App() {
                   isScrolled={!scrolling}
                   isHomepage={!isHomepage}
                 />
+                <Route path="/product/:slug" element={<Singleproduct />} />
               </Routes>
               <Footer />
             </Suspense>

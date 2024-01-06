@@ -61,7 +61,7 @@ const Header = () => {
       <Slider {...settings}>
         {image &&
           image.map((header, index) => (
-            <div className="image_container">
+            <div key={index} className="image_container">
               <div className="imager">
                 <div className="adapter" key={index}>
                   <img
