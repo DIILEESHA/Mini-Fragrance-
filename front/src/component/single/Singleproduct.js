@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import sanity from "../Sanity/sanity";
 import "./single.css";
 import Spinner from "../spinner/Spinner";
+import { Bars } from "react-loader-spinner";
 
 const SingleProduct = () => {
   const { slug } = useParams();
@@ -14,7 +15,7 @@ const SingleProduct = () => {
     const fetch = () => {
       setTimeout(() => {
         SetLoader(false);
-      }, 10000);
+      }, 1500);
     };
     fetch();
   });
@@ -53,7 +54,24 @@ const SingleProduct = () => {
   return (
     <div className="single_component">
       {loader ? (
-        <Spinner />
+        <div
+          style={{
+            height: "100vh",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Bars
+            height="80"
+            width="80"
+            color="#333"
+            ariaLabel="bars-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+            visible={true}
+          />
+        </div>
       ) : (
         <>
           <img src={product.productimg1.asset.url} alt={product.productTitle} />
