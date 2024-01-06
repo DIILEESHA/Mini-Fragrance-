@@ -15,7 +15,7 @@ const SingleProduct = () => {
     const fetch = () => {
       setTimeout(() => {
         SetLoader(false);
-      }, 1500);
+      }, 1800);
     };
     fetch();
   });
@@ -60,6 +60,7 @@ const SingleProduct = () => {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            background: "rgb(243, 241, 241)",
           }}
         >
           <Bars
