@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import sanity from "../Sanity/sanity";
 import "./single.css";
-import Spinner from "../spinner/Spinner";
 import { Bars } from "react-loader-spinner";
+import Headershop from "../headershop/Headershop";
 
 const SingleProduct = () => {
   const { slug } = useParams();
@@ -23,7 +23,7 @@ const SingleProduct = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        console.log("Product ID:", slug); // Log the product ID
+        console.log("Product ID:", slug);
 
         const productQuery = `*[_type == "product" && slug.current == "${slug}"]{
             productTitle,
@@ -36,7 +36,7 @@ const SingleProduct = () => {
           }`;
 
         const res = await sanity.fetch(productQuery);
-        console.log("Query Result:", res); // Log the query result
+        console.log("Query Result:", res);
 
         setProduct(res[0]);
       } catch (error) {
@@ -77,6 +77,8 @@ const SingleProduct = () => {
           <img src={product.productimg1.asset.url} alt={product.productTitle} />
           <h1>{product.productprice}</h1>
           <h1>{product.productTitle}</h1>
+
+          <Headershop />
         </>
       )}
     </div>

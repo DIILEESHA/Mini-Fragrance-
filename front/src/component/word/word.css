@@ -3,7 +3,9 @@
 .word {
   overflow-x: hidden;
   height: 20vh;
-  background-color: #fff;
+  /* background-color: #fff; */
+  background-color: rgb(243, 241, 241);
+
   overflow-y: hidden;
   margin-left: -20px;
   transform: rotate(0deg);
