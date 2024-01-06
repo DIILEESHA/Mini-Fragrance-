@@ -78,67 +78,68 @@ export default function Headershop() {
         <Slider {...mainSliderSettings}>
           {products &&
             products.map((header) => (
-              <div className="">
+              <div key={header.slug?.current} className="">
                 <div className="">
                   {/* **go to single to slug string with link */}
+
+                  <Slider {...individualCardSliderSettings}>
+                    {header.productimg1 && (
+                      <div
+                        className="sub_shop"
+                        key={`main-${header.slug?.current}-img1`}
+                      >
+                        <img
+                          src={header.productimg1.asset.url}
+                          alt={header.productTitle}
+                          loading="lazy"
+                          title={header.productTitle}
+                        />
+                      </div>
+                    )}
+                    {header.productimg2 && (
+                      <div
+                        className="sub_shop"
+                        key={`main-${header.slug?.current}-img2`}
+                      >
+                        <img
+                          src={header.productimg2.asset.url}
+                          alt={header && header.productTitle}
+                          loading="lazy"
+                        />
+                      </div>
+                    )}
+                    {header.productimg3 && (
+                      <div
+                        className="sub_shop"
+                        key={`main-${header.slug?.current}-img3`}
+                      >
+                        <img
+                          src={header.productimg3.asset.url}
+                          alt={header && header.productTitle}
+                          loading="lazy"
+                        />
+                      </div>
+                    )}
+                    {header.productimg4 && (
+                      <div
+                        className="sub_shop"
+                        key={`main-${header.slug?.current}-img4`}
+                      >
+                        <img
+                          src={header.productimg4.asset.url}
+                          alt={header && header.productTitle}
+                          loading="lazy"
+                        />
+                      </div>
+                    )}
+                  </Slider>
+
                   <Link
                     className="linka"
                     onClick={handleClicks}
                     to={`/product/${header.slug?.current}`}
                     key={header.slug?.current}
                   >
-                    <Slider {...individualCardSliderSettings}>
-                      {header.productimg1 && (
-                        <div
-                          className="sub_shop"
-                          key={`main-${header.slug?.current}-img1`}
-                        >
-                          <img
-                            src={header.productimg1.asset.url}
-                            alt={header.productTitle}
-                            loading="lazy"
-                            title={header.productTitle}
-                          />
-                        </div>
-                      )}
-                      {header.productimg2 && (
-                        <div
-                          className="sub_shop"
-                          key={`main-${header.slug?.current}-img2`}
-                        >
-                          <img
-                            src={header.productimg2.asset.url}
-                            alt={header && header.productTitle}
-                            loading="lazy"
-                          />
-                        </div>
-                      )}
-                      {header.productimg3 && (
-                        <div
-                          className="sub_shop"
-                          key={`main-${header.slug?.current}-img3`}
-                        >
-                          <img
-                            src={header.productimg3.asset.url}
-                            alt={header && header.productTitle}
-                            loading="lazy"
-                          />
-                        </div>
-                      )}
-                      {header.productimg4 && (
-                        <div
-                          className="sub_shop"
-                          key={`main-${header.slug?.current}-img4`}
-                        >
-                          <img
-                            src={header.productimg4.asset.url}
-                            alt={header && header.productTitle}
-                            loading="lazy"
-                          />
-                        </div>
-                      )}
-                    </Slider>
-
                     <h4 className="price">{header.productprice}</h4>
                     <h3 className="shop_title">
                       <div className="arrower" />
