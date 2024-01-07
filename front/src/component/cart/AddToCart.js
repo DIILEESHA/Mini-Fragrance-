@@ -26,21 +26,20 @@ const AddToCart = ({ onClose }) => {
               <IoMdClose className="closeicon" />
             </div>
             <ul className="cart_ul">
-              {cartState.cartItems.map((item, index) => (
-                // <li key={index}>
-                //   <img
-                //     style={{ width: "30px " }}
-                //     src={item.product.productimg1.asset.url}
-                //     alt=""
-                //   />
-                //   {item.product.productTitle} - Quantity: {item.quantity}
-                //   {item.product.productprice}
-                // </li>
+                {cartState.cartItems.map((item, index) => (
+                  <li key={index}>
+                    <img
+                      style={{ width: "30px " }}
+                      src={item.product.productimg1.asset.url}
+                      alt=""
+                    />
+                    {item.product.productTitle} - Quantity: {item.quantity}
+                    {item.product.productprice}
+                  </li>
 
-                <div>
+
                   
-                </div>
-              ))}
+                ))}
             </ul>
           </div>
         </>

@@ -8,13 +8,25 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { PrevArrow, NextArrow } from "../header/CustomArrow";
-import Footer from "../footer/Footer";
+
 import { PortableText } from "@portabletext/react";
 import { IoIosArrowDown } from "react-icons/io";
 import { useCart } from "../../context/CartContext";
-import AddToCart from "../cart/AddToCart";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const SingleProduct = () => {
+  const notify = () =>
+    toast.success("Add to cart Successfully", {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
   const { slug } = useParams();
   const [product, setProduct] = useState(null);
   const [showUsage, setShowusage] = useState(false);
@@ -23,13 +35,11 @@ const SingleProduct = () => {
   const { addToCart } = useCart();
   const [quantity, setQuantity] = useState(1);
 
-
   const handleAddToCart = () => {
     addToCart(product, quantity);
     setQuantity(1);
+    notify();
   };
-
-
 
   const handleIng = () => {
     setShowIng(!showIng);
@@ -185,24 +195,19 @@ const SingleProduct = () => {
                 </p>
               </div>
 
-      
-             
               <div className="qua">
-              <input
-                type="number"
-                min="1"
-                className="elom"
-                value={quantity}
-                onChange={(e) =>
-                  setQuantity(Math.max(1, parseInt(e.target.value)))
-                }
-              />
+                <input
+                  type="number"
+                  min="1"
+                  className="elom"
+                  value={quantity}
+                  onChange={(e) =>
+                    setQuantity(Math.max(1, parseInt(e.target.value)))
+                  }
+                />
 
-              <button onClick={handleAddToCart}>Add to Cart</button>
+                <button onClick={handleAddToCart}>Add to Cart</button>
               </div>
-
-            
-            
 
               <div className="extra">
                 <div className="usage">
