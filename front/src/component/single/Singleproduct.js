@@ -62,7 +62,9 @@ const SingleProduct = () => {
             productimg4 { asset->{ _id, url }},
             productprice,
             productpreviousprice,
-            singleproductbody
+            singleproductbody,
+            singleproductbody1,
+            singleproductbody2,singleproductbody3
           }`;
 
         const res = await sanity.fetch(productQuery);
@@ -175,6 +177,8 @@ const SingleProduct = () => {
 
               <div className="extra">
                 <div className="usage">
+                  <div className="lkj"></div>
+
                   <div className="ico_extra" onClick={handleUsage}>
                     <h3 className="extra_title">functionality</h3>
                     <IoIosArrowDown />
@@ -182,9 +186,7 @@ const SingleProduct = () => {
 
                   {showUsage && (
                     <p className="extra_p">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Porro, dignissimos voluptate amet nam quas ut optio soluta
-                      similique natus reprehenderit!
+                      <PortableText value={product.singleproductbody1} />
                     </p>
                   )}
                   <div className="lkj"></div>
@@ -197,9 +199,7 @@ const SingleProduct = () => {
 
                   {showWarning && (
                     <p className="extra_p">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Porro, dignissimos voluptate amet nam quas ut optio soluta
-                      similique natus reprehenderit!
+                      <PortableText value={product.singleproductbody2} />
                     </p>
                   )}
                   <div className="lkj"></div>
@@ -213,9 +213,7 @@ const SingleProduct = () => {
 
                   {showIng && (
                     <p className="extra_p">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Porro, dignissimos voluptate amet nam quas ut optio soluta
-                      similique natus reprehenderit!
+                      <PortableText value={product.singleproductbody3} />
                     </p>
                   )}
                   <div className="lkj"></div>
