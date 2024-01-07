@@ -1,19 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import "./nav.css";
 import { PiShoppingCartSimpleBold } from "react-icons/pi";
 import { MdScreenSearchDesktop } from "react-icons/md";
 import { BsSearchHeart } from "react-icons/bs";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { Link, NavLink, useLocation, useParams } from "react-router-dom";
+import AddToCart from "../cart/AddToCart";
 
 const Lgnav = ({ isScrolled }) => {
   const location = useLocation();
+  const [isCartModalOpen, setCartModalOpen] = useState(false);
 
   const { index } = useParams();
 
   const isAboutPage = location.pathname === "/about";
   const isSystem = location.pathname === "/system";
-  const isSingle =  location.pathname.includes("/product/");
+  const isSingle = location.pathname.includes("/product/");
 
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -21,6 +23,14 @@ const Lgnav = ({ isScrolled }) => {
     damping: 30,
     restDelta: 0.001,
   });
+
+  const handleOpenCartModal = () => {
+    setCartModalOpen(true);
+  };
+
+  const handleCloseCartModal = () => {
+    setCartModalOpen(false);
+  };
 
   return (
     <div
@@ -42,7 +52,10 @@ const Lgnav = ({ isScrolled }) => {
             </NavLink>
           </li>
           <li className="nav_lg_li">
-            <PiShoppingCartSimpleBold className="ico" />
+            <PiShoppingCartSimpleBold
+              onClick={handleOpenCartModal}
+              className="ico"
+            />
           </li>
         </ul>
       </div>
@@ -58,6 +71,7 @@ const Lgnav = ({ isScrolled }) => {
           </li>
         </ul>
       </div>
+      {isCartModalOpen && <AddToCart onClose={handleCloseCartModal} />}
       <div className="right">
         <ul className="lgnav_ul">
           <li className="nav_lg_li bk">shop</li>

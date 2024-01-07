@@ -95,3 +95,32 @@
   background-color: #bcb3af;
   margin-bottom: 20px;
 }
+
+.qua {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.elom {
+  border: 1px solid #bcb3af;
+
+  padding: 10px;
+  width: 70px;
+  border-radius: 2px;
+  outline: none;
+  font-family: "poppins", sans-serif;
+  font-size: 15px;
+}
+.qua button {
+  padding-inline: 10px;
+  font-family: "poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #fff;
+  background-color: #bcb3af;
+  border-radius: 2px;
+  outline: none;
+  border: 1px solid #bcb3af;
+}

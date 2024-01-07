@@ -5,6 +5,7 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Cookie from "./component/cookie/Cookie";
 import "./fonts/fonts.css";
 import { AnimatePresence } from "framer-motion";
+import AddToCart from "./component/cart/AddToCart";
 const Home = lazy(() => import("./component/home/Home"));
 const About = lazy(() => import("./component/about/About"));
 const Nav = lazy(() => import("./component/nav/Nav"));
@@ -23,7 +24,7 @@ function App() {
     const fetchData = async () => {
       setTimeout(() => {
         setLoading(false);
-      }, 3000);
+      },100);
     };
 
     fetchData();
@@ -57,31 +58,32 @@ function App() {
       {loading ? (
         <Spinner />
       ) : (
-          <BrowserRouter>
-            <Cookie />
-            {showPopup && <Newsletter closePopup={closePopup} />}
-            <Suspense >
-              <Nav />
-              <Lgnav isScrolled={scrolling} isHomepage={isHomepage} />
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route
-                  path="/about"
-                  element={<About />}
-                  isScrolled={!scrolling}
-                  isHomepage={!isHomepage}
-                />
-                <Route
-                  path="/system"
-                  element={<System />}
-                  isScrolled={!scrolling}
-                  isHomepage={!isHomepage}
-                />
-                <Route path="/product/:slug" element={<Singleproduct />} />
-              </Routes>
-            </Suspense>
-            <Footer />
-          </BrowserRouter>
+        <BrowserRouter>
+          <Cookie />
+          {showPopup && <Newsletter closePopup={closePopup} />}
+          <Suspense>
+            <Nav />
+            <Lgnav isScrolled={scrolling} isHomepage={isHomepage} />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route
+                path="/about"
+                element={<About />}
+                isScrolled={!scrolling}
+                isHomepage={!isHomepage}
+              />
+              <Route
+                path="/system"
+                element={<System />}
+                isScrolled={!scrolling}
+                isHomepage={!isHomepage}
+              />
+              <Route path="/product/:slug" element={<Singleproduct />} />
+            </Routes>
+          </Suspense>
+          {/* <AddToCart /> */}
+          <Footer />
+        </BrowserRouter>
       )}
     </div>
   );

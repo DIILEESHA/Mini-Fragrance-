@@ -11,6 +11,8 @@ import { PrevArrow, NextArrow } from "../header/CustomArrow";
 import Footer from "../footer/Footer";
 import { PortableText } from "@portabletext/react";
 import { IoIosArrowDown } from "react-icons/io";
+import { useCart } from "../../context/CartContext";
+import AddToCart from "../cart/AddToCart";
 
 const SingleProduct = () => {
   const { slug } = useParams();
@@ -18,7 +20,16 @@ const SingleProduct = () => {
   const [showUsage, setShowusage] = useState(false);
   const [showWarning, setShowWarning] = useState(false);
   const [showIng, setShowIng] = useState(false);
-  // handleIng
+  const { addToCart } = useCart();
+  const [quantity, setQuantity] = useState(1);
+
+
+  const handleAddToCart = () => {
+    addToCart(product, quantity);
+    setQuantity(1);
+  };
+
+
 
   const handleIng = () => {
     setShowIng(!showIng);
@@ -85,15 +96,14 @@ const SingleProduct = () => {
 
   const settings = {
     dots: true,
-    autoplaySpeed: 1200,
-    speed: 2000,
-    autoplay: true,
-    infinite: false,
-    slidesToShow: 1,
     fade: true,
-    slidesToScroll: 1,
-    className: "hd",
-    initialSlide: 0,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    autoplaySpeed: 3000,
+    // rtl: true,
+    autoplay: true,
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
   };
@@ -174,6 +184,25 @@ const SingleProduct = () => {
                   <PortableText value={product.singleproductbody} />
                 </p>
               </div>
+
+      
+             
+              <div className="qua">
+              <input
+                type="number"
+                min="1"
+                className="elom"
+                value={quantity}
+                onChange={(e) =>
+                  setQuantity(Math.max(1, parseInt(e.target.value)))
+                }
+              />
+
+              <button onClick={handleAddToCart}>Add to Cart</button>
+              </div>
+
+            
+            
 
               <div className="extra">
                 <div className="usage">

@@ -1,0 +1,30 @@
+.cart-modal {
+  width: 100vw;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+}
+
+.cart {
+  z-index: 1000;
+  padding: 20px;
+  position: absolute;
+  right: 0;
+  width: 35vw;
+  height: 100vh;
+  top: 0;
+  background-color: #fff;
+}
+
+.cart button {
+  background-color: #fff;
+}
+
+.cart_ul {
+  position: relative;
+}
+.fg {
+  margin-bottom: 30px;
+}
