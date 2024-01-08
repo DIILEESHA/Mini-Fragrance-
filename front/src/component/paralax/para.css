@@ -35,10 +35,10 @@
   font-weight: 700;
 }
 .sub_content button {
-  background: transparent;
+  background: rgba(0,0,0,0.4);
 
   /* background: #000; */
-  border: 1px solid #fff;
+  border: 1px solid #272727;
   /* border: none; */
   display: flex;
   align-items: center;

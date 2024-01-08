@@ -116,7 +116,7 @@ const AddToCart = ({ onClose }) => {
             />
 
             <div>Your cart is currently empty!</div>
-          <button className="continue">continue shopping</button>
+            <button className="continue">continue shopping</button>
           </div>
         </div>
       )}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./nav.css";
 import { PiShoppingCartSimpleBold } from "react-icons/pi";
 import { MdScreenSearchDesktop } from "react-icons/md";
@@ -6,10 +6,12 @@ import { BsSearchHeart } from "react-icons/bs";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { Link, NavLink, useLocation, useParams } from "react-router-dom";
 import AddToCart from "../cart/AddToCart";
+import { useCart } from "../../context/CartContext";
 
 const Lgnav = ({ isScrolled }) => {
   const location = useLocation();
   const [isCartModalOpen, setCartModalOpen] = useState(false);
+  const { cartState } = useCart();
 
   const { index } = useParams();
 
@@ -31,6 +33,7 @@ const Lgnav = ({ isScrolled }) => {
   const handleCloseCartModal = () => {
     setCartModalOpen(false);
   };
+  useEffect(() => {}, [cartState]);
 
   return (
     <div
@@ -52,10 +55,17 @@ const Lgnav = ({ isScrolled }) => {
             </NavLink>
           </li>
           <li className="nav_lg_li">
-            <PiShoppingCartSimpleBold
-              onClick={handleOpenCartModal}
-              className="ico"
-            />
+            <div className="ime" onClick={handleOpenCartModal}>
+              <PiShoppingCartSimpleBold className="ico" />
+
+              <div className="cruse">
+                {cartState.cartItems.length > 0 && (
+                  <div className="cart-item-count">
+                    {cartState.cartItems.length}
+                  </div>
+                )}
+              </div>
+            </div>
           </li>
         </ul>
       </div>
