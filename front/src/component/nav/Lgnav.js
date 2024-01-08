@@ -9,6 +9,10 @@ import AddToCart from "../cart/AddToCart";
 import { useCart } from "../../context/CartContext";
 
 const Lgnav = ({ isScrolled }) => {
+  const handleClicks = () => {
+    // Scroll to the top of the SingleItemDetail component
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   const location = useLocation();
   const [isCartModalOpen, setCartModalOpen] = useState(false);
   const { cartState } = useCart();
@@ -45,12 +49,12 @@ const Lgnav = ({ isScrolled }) => {
       <div className="left">
         <ul className="lgnav_ul">
           <li className="nav_lg_li bk">
-            <NavLink className="linka" to="/about">
+            <NavLink className="linka" onClick={handleClicks} to="/about">
               about
             </NavLink>
           </li>
           <li className="nav_lg_li bk">
-            <NavLink className="linka" to="/system">
+            <NavLink className="linka" onClick={handleClicks} to="/system">
               system
             </NavLink>
           </li>
@@ -73,7 +77,7 @@ const Lgnav = ({ isScrolled }) => {
         <ul className="lgnav_ul">
           <li className="nav_lg_li">
             <div className="casper">
-              <Link className="linka" to="/">
+              <Link className="linka" onClick={handleClicks} to="/">
                 <h4 className="duta">nullpunkt</h4>
                 <h5 className="meeba">functional fragrances</h5>
               </Link>
