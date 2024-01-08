@@ -3,16 +3,29 @@ import React, { useEffect, useState } from "react";
 import { useCart } from "../../context/CartContext";
 import "./cart.css";
 import { IoMdClose } from "react-icons/io";
+import { LiaHandPeaceSolid } from "react-icons/lia";
+import { FiShoppingCart } from "react-icons/fi";
 
 const AddToCart = ({ onClose }) => {
-  const { cartState } = useCart();
+  const { cartState, removeFromCart, updateQuantity } = useCart();
   const [isCartVisible, setCartVisible] = useState(true);
-
-  const [shop, setShop] = useState(false);
 
   const handleClose = () => {
     setCartVisible(false);
     onClose();
+  };
+
+  const handleRemoveFromCart = (index) => {
+    removeFromCart(index);
+  };
+
+  const handleIncreaseQuantity = (index) => {
+    updateQuantity(index, cartState.cartItems[index].quantity + 1);
+  };
+
+  const handleDecreaseQuantity = (index) => {
+    const newQuantity = Math.max(1, cartState.cartItems[index].quantity - 1);
+    updateQuantity(index, newQuantity);
   };
 
   useEffect(() => {}, []);
@@ -23,33 +36,89 @@ const AddToCart = ({ onClose }) => {
         <>
           <div className="cart">
             <div className="fg" onClick={handleClose}>
-              <IoMdClose className="closeicon" />
+              <IoMdClose className="closeicon ok" />
             </div>
-            <ul className="cart_ul">
-                {cartState.cartItems.map((item, index) => (
-                  <li key={index}>
-                    <img
-                      style={{ width: "30px " }}
-                      src={item.product.productimg1.asset.url}
-                      alt=""
-                    />
-                    {item.product.productTitle} - Quantity: {item.quantity}
-                    {item.product.productprice}
-                  </li>
+            <h2 className="small">
+              Congrats! You get free standard shipping
+              <LiaHandPeaceSolid className="sux" />
+            </h2>
+            <div className="linef"></div>
+            <div className="demar">
+              <div className="mular">
+                <div className="gasp">
+                  {cartState.cartItems.map((item, index) => (
+                    <>
+                      <div className="cart_ul" key={index}>
+                        <div className="cart_sub">
+                          <img
+                            className="bumba"
+                            src={item.product.productimg1.asset.url}
+                            alt=""
+                          />
+                        </div>
 
+                        <div className="cart_sub">
+                          <h2 className="tita">{item.product.productTitle}</h2>
+                          <div className="quant_btn">
+                            <button
+                              className="meow"
+                              onClick={() => handleDecreaseQuantity(index)}
+                            >
+                              -
+                            </button>
+                            {item.quantity}
+                            <button
+                              className="meow"
+                              onClick={() => handleIncreaseQuantity(index)}
+                            >
+                              +
+                            </button>
+                          </div>
+                        </div>
 
-                  
-                ))}
-            </ul>
+                        <div className="cart_sub">
+                          <IoMdClose
+                            onClick={() => handleRemoveFromCart(index)}
+                            className="oy"
+                          />
+
+                          {item.product.productprice}
+                        </div>
+                      </div>
+                      <div className="am"></div>
+                    </>
+                  ))}
+                </div>
+              </div>
+              <div className="mular m">
+                <div className="checkout_session">
+                  <div className="total_section">
+                    <div className="word_section">
+                      <h2 className="sub">sub total</h2>
+                      <h3 className="total">$806</h3>
+                    </div>
+                  </div>
+                  <button className="check">proceed to checkout</button>
+                </div>
+              </div>
+            </div>
           </div>
         </>
       ) : (
-        <>
-          <button style={{ border: "1px solid red" }} onClick={handleClose}>
-            Close
-          </button>
-          <div>your cart is empty</div>
-        </>
+        <div className="cart g">
+          <div className="fg" onClick={handleClose}>
+            <IoMdClose className="closeicon ok" />
+          </div>
+          <div className="gr">
+            <img
+              src="https://minimalist-e-commerce.vercel.app/static/media/empty-cart.17f48bd13327a233e04a.png"
+              alt=""
+            />
+
+            <div>Your cart is currently empty!</div>
+          <button className="continue">continue shopping</button>
+          </div>
+        </div>
       )}
     </div>
   );
