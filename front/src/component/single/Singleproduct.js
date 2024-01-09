@@ -64,7 +64,7 @@ const SingleProduct = () => {
     const fetch = () => {
       setTimeout(() => {
         SetLoader(false);
-      }, 1800);
+      }, 2800);
     };
     fetch();
   });
@@ -251,6 +251,47 @@ const SingleProduct = () => {
                     </p>
                   )}
                   <div className="lkj"></div>
+                </div>
+              </div>
+
+              <div className="checkout">
+                <div className="checkout_box">
+                  <div className="checkout_title">
+                    <h2>Guaranteed Safe Checkout</h2>
+                  </div>
+
+                  <ul className="checkout_ul">
+                    <li className="check_li">
+                      <img
+                        src="https://preview.colorlib.com/theme/cozastore/images/icons/icon-pay-01.png.webp"
+                        alt=""
+                      />
+                    </li>
+                    <li className="check_li">
+                      <img
+                        src="https://preview.colorlib.com/theme/cozastore/images/icons/icon-pay-02.png.webp"
+                        alt=""
+                      />
+                    </li>
+                    <li className="check_li">
+                      <img
+                        src="https://preview.colorlib.com/theme/cozastore/images/icons/icon-pay-03.png.webp"
+                        alt=""
+                      />
+                    </li>
+                    <li className="check_li">
+                      <img
+                        src="https://preview.colorlib.com/theme/cozastore/images/icons/icon-pay-04.png.webp"
+                        alt=""
+                      />
+                    </li>
+                    <li className="check_li">
+                      <img
+                        src="https://preview.colorlib.com/theme/cozastore/images/icons/icon-pay-05.png.webp"
+                        alt=""
+                      />
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
