@@ -46,10 +46,10 @@ export default function Headershop() {
 
   const mainSliderSettings = {
     dots: false,
-    speed: 1900,
+    speed: 1100,
     slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplaySpeed: 3200,
+    slidesToScroll: 2,
+    autoplaySpeed: 5000,
     className: "center",
     centerMode: true,
     infinite: true,

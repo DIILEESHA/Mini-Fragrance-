@@ -59,7 +59,7 @@ function App() {
       ) : (
         <BrowserRouter>
           <Cookie />
-          {showPopup && <Newsletter closePopup={closePopup} />}
+          {/* {showPopup && <Newsletter closePopup={closePopup} />} */}
           <Suspense>
             <Nav />
             <Lgnav isScrolled={scrolling} isHomepage={isHomepage} />

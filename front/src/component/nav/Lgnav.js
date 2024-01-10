@@ -19,6 +19,14 @@ const Lgnav = ({ isScrolled }) => {
 
   const { index } = useParams();
 
+  const handleLinkHover = () => {
+    // Play music when link is hovered
+    const audio = new Audio(
+      "https://drive.google.com/file/d/13cH8FLOnv9hZM8JDy3IgtrAgDdx_lRIv/view?usp=drive_link"
+    );
+    audio.play();
+  };
+
   const isAboutPage = location.pathname === "/about";
   const isSystem = location.pathname === "/system";
   const isShop = location.pathname === "/shop";

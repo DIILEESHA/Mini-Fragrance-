@@ -7,13 +7,17 @@ const Newsletter = ({ closePopup }) => {
     <div className="newsletter_container">
       <div className="news_card">
         <div className="news_grid">
-          <div className="news_sub_grid">
-            <img
+          <div className="news_sub_grid d">
+            <img 
+            className="dewa"
               src="https://nullpunkt.co/cdn/shop/files/03_IBUKUN_720_5.jpg?v=1670235142&width=1500"
               alt=""
             />
+             <div className="close rtu">
+              <IoMdClose className="closeicon fc" onClick={closePopup} />
+            </div>
           </div>
-          <div className="news_sub_grid">
+          <div className="news_sub_grid m">
             <div className="close">
               <IoMdClose className="closeicon" onClick={closePopup} />
             </div>

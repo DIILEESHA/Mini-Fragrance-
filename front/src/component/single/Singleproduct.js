@@ -10,7 +10,11 @@ import Slider from "react-slick";
 import { PrevArrow, NextArrow } from "../header/CustomArrow";
 
 import { PortableText } from "@portabletext/react";
-import { IoIosArrowDown } from "react-icons/io";
+import {
+  IoIosArrowDown,
+  IoIosArrowRoundUp,
+  IoIosArrowUp,
+} from "react-icons/io";
 import { useCart } from "../../context/CartContext";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -216,7 +220,7 @@ const SingleProduct = () => {
 
                   <div className="ico_extra" onClick={handleUsage}>
                     <h3 className="extra_title">functionality</h3>
-                    <IoIosArrowDown />
+                    {showUsage ? <IoIosArrowUp /> : <IoIosArrowDown />}
                   </div>
 
                   {showUsage && (
@@ -229,7 +233,7 @@ const SingleProduct = () => {
                 <div className="warning">
                   <div className="ico_extra" onClick={handleWarning}>
                     <h3 className="extra_title">how to apply</h3>
-                    <IoIosArrowDown />
+                    {showWarning ? <IoIosArrowUp /> : <IoIosArrowDown />}
                   </div>
 
                   {showWarning && (
@@ -243,7 +247,7 @@ const SingleProduct = () => {
                 <div className="warning">
                   <div className="ico_extra" onClick={handleIng}>
                     <h3 className="extra_title">Conscious Ingredients</h3>
-                    <IoIosArrowDown />
+                    {showIng ? <IoIosArrowUp /> : <IoIosArrowDown />}
                   </div>
 
                   {showIng && (

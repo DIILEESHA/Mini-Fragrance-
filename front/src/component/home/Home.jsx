@@ -12,12 +12,12 @@ import Footer from "../footer/Footer";
 const Home = () => {
   return (
     <div className="home">
-      <Header />
+      {/* <Header />
       <Word />
       <WeAre />
       <Parallaxd />
       <Headershop />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 };
