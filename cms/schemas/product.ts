@@ -18,6 +18,12 @@ export default defineType({
     }),
 
     defineField({
+      name: 'productpreviousprice',
+      title: 'price',
+      type: 'string',
+    }),
+
+    defineField({
       name: 'productimg1',
       title: 'product images',
       type: 'image',
@@ -31,6 +37,15 @@ export default defineType({
       type: 'image',
       options: {
         hotspot: true,
+      },
+    }),
+    defineField({
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: {
+        source: 'productTitle', // Use the product title as the source for the slug
+        maxLength: 200, // Set a maximum length for the slug
       },
     }),
 
@@ -49,6 +64,26 @@ export default defineType({
       options: {
         hotspot: true,
       },
+    }),
+    defineField({
+      name: 'singleproductbody',
+      title: 'Body',
+      type: 'blockContent',
+    }),
+    defineField({
+      name: 'singleproductbody1',
+      title: 'Body',
+      type: 'blockContent',
+    }),
+    defineField({
+      name: 'singleproductbody2',
+      title: 'Body',
+      type: 'blockContent',
+    }),
+    defineField({
+      name: 'singleproductbody3',
+      title: 'Body',
+      type: 'blockContent',
     }),
   ],
 })
