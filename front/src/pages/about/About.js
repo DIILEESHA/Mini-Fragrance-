@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./bout.css";
-import "../who/are.css";
-import ParticleComponent from "../particle/ParticleComponent";
-import sanity from "../Sanity/sanity";
+import "../../component/who/are.css";
+import ParticleComponent from "../../component/particle/ParticleComponent";
+import sanity from "../../component/Sanity/sanity";
 import { PortableText } from "@portabletext/react";
 import { BlockContent } from "@sanity/block-content-to-react";
-import Headershop from "../headershop/Headershop";
-import Footer from "../footer/Footer";
+import Headershop from "../../component/headershop/Headershop";
+import Footer from "../../component/footer/Footer";
 
 const About = ({ isScrolled }) => {
   const [about, setAbout] = useState([]);
@@ -97,7 +97,7 @@ const About = ({ isScrolled }) => {
             </p>
           </div>
           <Headershop />
-          <Footer/>
+          <Footer />
         </div>
       ))}
     </div>

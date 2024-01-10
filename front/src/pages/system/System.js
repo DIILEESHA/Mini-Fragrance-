@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./sys.css";
-import "../who/are.css";
-import sanity from "../Sanity/sanity";
+import '../../component/who/are.css'
+import sanity from "../../component/Sanity/sanity";
 import { PortableText } from "@portabletext/react";
-import Headershop from "../headershop/Headershop";
-import Footer from "../footer/Footer";
+import Headershop from "../../component/headershop/Headershop";
+import Footer from "../../component/footer/Footer";
 
 const System = () => {
   const [system, setSystem] = useState([]);

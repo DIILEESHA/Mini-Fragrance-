@@ -4,13 +4,13 @@ import Spinner from "./component/spinner/Spinner";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Cookie from "./component/cookie/Cookie";
 import "./fonts/fonts.css";
-import Shop from "./component/shop/Shop";
+import Shop from "./pages/shop/Shop";
 const Home = lazy(() => import("./component/home/Home"));
-const About = lazy(() => import("./component/about/About"));
+const About = lazy(() => import("./pages/about/About"));
 const Nav = lazy(() => import("./component/nav/Nav"));
 const Footer = lazy(() => import("./component/footer/Footer"));
 const Lgnav = lazy(() => import("./component/nav/Lgnav"));
-const System = lazy(() => import("./component/system/System"));
+const System = lazy(() => import("./pages/system/System"));
 const Newsletter = lazy(() => import("./component/newsletter/Newsletter"));
 const Singleproduct = lazy(() => import("./component/single/Singleproduct"));
 
