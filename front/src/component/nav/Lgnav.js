@@ -21,6 +21,7 @@ const Lgnav = ({ isScrolled }) => {
 
   const isAboutPage = location.pathname === "/about";
   const isSystem = location.pathname === "/system";
+  const isShop = location.pathname === "/shop";
   const isSingle = location.pathname.includes("/product/");
 
   const { scrollYProgress } = useScroll();
@@ -41,9 +42,14 @@ const Lgnav = ({ isScrolled }) => {
 
   return (
     <div
-      className={`lg_nav ${isScrolled ? "scrolled" : ""} ${
-        isAboutPage ? "pink" : ""
-      }  ${isSystem ? "pink" : ""} ${isSingle ? "pink" : ""}`}
+      className={`lg_nav 
+      ${isScrolled ? "scrolled" : ""} 
+      ${isAboutPage ? "pink" : ""} 
+      ${isSystem ? "pink" : ""} 
+      ${isSingle ? "pink" : ""}
+      ${isShop ? "pink" : ""}
+      
+      `}
     >
       <motion.div className="progress-bar" style={{ scaleX }} />
       <div className="left">
@@ -88,7 +94,9 @@ const Lgnav = ({ isScrolled }) => {
       {isCartModalOpen && <AddToCart onClose={handleCloseCartModal} />}
       <div className="right">
         <ul className="lgnav_ul">
-          <li className="nav_lg_li bk">shop</li>
+          <Link className="linka" onClick={handleClicks} to="/shop">
+            <li className="nav_lg_li bk">shop</li>
+          </Link>
           <li className="nav_lg_li">
             <BsSearchHeart className="ico" />
           </li>

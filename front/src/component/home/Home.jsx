@@ -7,6 +7,7 @@ import Headershop from "../headershop/Headershop";
 import Section from "../velo/Section";
 import Mini from "../velo/Mini";
 import Parallaxd from "../paralax/Parallaxd";
+import Footer from "../footer/Footer";
 
 const Home = () => {
   return (
@@ -14,13 +15,9 @@ const Home = () => {
       <Header />
       <Word />
       <WeAre />
-      {/* <Parallaxd /> */}
       <Parallaxd />
       <Headershop />
-      {/* <Headershop /> */}
-
-      {/* <Word /> */}
-      {/* <Section/> */}
+      <Footer />
     </div>
   );
 };

@@ -4,8 +4,7 @@ import Spinner from "./component/spinner/Spinner";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Cookie from "./component/cookie/Cookie";
 import "./fonts/fonts.css";
-import { AnimatePresence } from "framer-motion";
-import AddToCart from "./component/cart/AddToCart";
+import Shop from "./component/shop/Shop";
 const Home = lazy(() => import("./component/home/Home"));
 const About = lazy(() => import("./component/about/About"));
 const Nav = lazy(() => import("./component/nav/Nav"));
@@ -24,7 +23,7 @@ function App() {
     const fetchData = async () => {
       setTimeout(() => {
         setLoading(false);
-      },100);
+      }, 1000);
     };
 
     fetchData();
@@ -79,10 +78,10 @@ function App() {
                 isHomepage={!isHomepage}
               />
               <Route path="/product/:slug" element={<Singleproduct />} />
+              <Route path="/shop" element={<Shop />} />
             </Routes>
           </Suspense>
-          {/* <AddToCart /> */}
-          <Footer />
+          {/* <Footer /> */}
         </BrowserRouter>
       )}
     </div>

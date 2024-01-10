@@ -6,6 +6,7 @@ import sanity from "../Sanity/sanity";
 import { PortableText } from "@portabletext/react";
 import { BlockContent } from "@sanity/block-content-to-react";
 import Headershop from "../headershop/Headershop";
+import Footer from "../footer/Footer";
 
 const About = ({ isScrolled }) => {
   const [about, setAbout] = useState([]);
@@ -96,6 +97,7 @@ const About = ({ isScrolled }) => {
             </p>
           </div>
           <Headershop />
+          <Footer/>
         </div>
       ))}
     </div>

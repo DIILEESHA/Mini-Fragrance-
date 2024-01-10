@@ -14,6 +14,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { useCart } from "../../context/CartContext";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Footer from "../footer/Footer";
 
 const SingleProduct = () => {
   const notify = () =>
@@ -297,6 +298,7 @@ const SingleProduct = () => {
             </div>
           </div>
           <Headershop />
+          <Footer />
         </>
       )}
     </div>

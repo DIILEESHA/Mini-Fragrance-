@@ -1,0 +1,19 @@
+.shop_container {
+  /* height: 100vh; */
+}
+
+.muba {
+    padding: 40px 80px;
+    margin-top: 113px;
+}
+
+.shop_grider {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 10px;
+}
+.shop_sub_grider {
+  border: 1px solid #333;
+  height: 100vh;
+  /* margin-bottom: 40px; */
+}

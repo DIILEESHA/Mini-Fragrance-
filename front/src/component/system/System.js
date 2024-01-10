@@ -4,6 +4,7 @@ import "../who/are.css";
 import sanity from "../Sanity/sanity";
 import { PortableText } from "@portabletext/react";
 import Headershop from "../headershop/Headershop";
+import Footer from "../footer/Footer";
 
 const System = () => {
   const [system, setSystem] = useState([]);
@@ -165,6 +166,7 @@ const System = () => {
             </div>
           </div>
           <Headershop />
+          <Footer />
         </div>
       ))}
     </div>
