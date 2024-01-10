@@ -1,19 +1,56 @@
 .shop_container {
-  /* height: 100vh; */
+  height: auto;
+  background-color: rgb(243, 241, 241);
+
 }
 
 .muba {
-    padding: 40px 80px;
-    margin-top: 113px;
+  padding: 40px 80px;
+  margin-top: 113px;
 }
 
 .shop_grider {
   display: grid;
-  grid-template-columns: 1fr 4fr;
-  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.meeba {
 }
 .shop_sub_grider {
-  border: 1px solid #333;
-  height: 100vh;
+  margin: 30px 0 30px 0;
+  /* border: 1px solid #333; */
+  height: 80vh;
+  width: 100%;
   /* margin-bottom: 40px; */
+}
+
+.shop_sub_grider:nth-child(odd) {
+  height: 70vh /* your desired height */;
+
+  border-radius: 50px;
+}
+.nima:nth-child(odd) {
+  border-radius: 1%;
+}
+.nima:nth-child(even) {
+  border-radius: 5px;
+}
+.nuba {
+  text-align: center;
+  text-transform: capitalize;
+  color: #333;
+  letter-spacing: 1.5;
+  font-size: 30px;
+}
+
+.dam {
+  height: 100%;
+}
+ .nima {
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

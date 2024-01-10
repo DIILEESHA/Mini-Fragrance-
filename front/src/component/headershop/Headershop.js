@@ -7,6 +7,8 @@ import Section from "../velo/Section";
 import sanity from "../Sanity/sanity";
 import { PrevArrow, NextArrow } from "../header/CustomArrow";
 import { Link } from "react-router-dom";
+import Atropos from "atropos/react";
+import "atropos/css";
 
 export default function Headershop() {
   const [products, setProducts] = useState([]);
@@ -88,12 +90,12 @@ export default function Headershop() {
                         className="sub_shop"
                         key={`main-${header.slug?.current}-img1`}
                       >
-                        <img
-                          src={header.productimg1.asset.url}
-                          alt={header.productTitle}
-                          loading="lazy"
-                          title={header.productTitle}
-                        />
+                          <img
+                            src={header.productimg1.asset.url}
+                            alt={header.productTitle}
+                            loading="lazy"
+                            title={header.productTitle}
+                          />
                       </div>
                     )}
                     {header.productimg2 && (
