@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import sanity from "../Sanity/sanity";
+import sanity from "../../Sanity/sanity";
 import "./single.css";
 import { Bars } from "react-loader-spinner";
-import Headershop from "../headershop/Headershop";
+import Headershop from "../../component/headershop/Headershop";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { PrevArrow, NextArrow } from "../header/CustomArrow";
+import { PrevArrow, NextArrow } from "../../component/header/CustomArrow";
 
 import { PortableText } from "@portabletext/react";
 import {
@@ -18,7 +18,7 @@ import {
 import { useCart } from "../../context/CartContext";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Footer from "../footer/Footer";
+import Footer from "../../component/footer/Footer";
 
 const SingleProduct = () => {
   const notify = () =>

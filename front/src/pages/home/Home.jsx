@@ -1,13 +1,13 @@
 import React from "react";
 import "./home.css";
-import Header from "../header/Header";
-import WeAre from "../who/WeAre";
-import Word from "../word/Word";
-import Headershop from "../headershop/Headershop";
-import Section from "../velo/Section";
-import Mini from "../velo/Mini";
-import Parallaxd from "../paralax/Parallaxd";
-import Footer from "../footer/Footer";
+import Header from "../../component/header/Header";
+import WeAre from "../../component/who/WeAre";
+import Word from "../../component/word/Word";
+import Headershop from "../../component/headershop/Headershop";
+import Section from "../../component/velo/Section";
+import Mini from "../../component/velo/Mini";
+import Parallaxd from "../../component/paralax/Parallaxd";
+import Footer from "../../component/footer/Footer";
 
 const Home = () => {
   return (
