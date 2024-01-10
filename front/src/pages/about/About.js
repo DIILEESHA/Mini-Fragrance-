@@ -98,6 +98,7 @@ const About = ({ isScrolled }) => {
           </div>
           <Headershop />
           <Footer />
+          <></>
         </div>
       ))}
     </div>
