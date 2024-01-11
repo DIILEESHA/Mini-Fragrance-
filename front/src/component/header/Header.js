@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Nav from "../nav/Nav";
-import client from "../Sanity/sanity.js";
+import client from "../../Sanity/sanity.js";
 
 import Lgnav from "../nav/Lgnav.js";
 import { PrevArrow, NextArrow } from "./CustomArrow";

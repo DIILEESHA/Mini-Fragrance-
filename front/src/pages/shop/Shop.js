@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./shop.css";
 import '../../component/headershop/headershop.css'
 import Footer from "../../component/footer/Footer";
-import sanity from "../../component/Sanity/sanity";
+import sanity from "../../Sanity/sanity";
+
 import { Link } from "react-router-dom";
 import Atropos from "atropos/react";
 import "atropos/css";

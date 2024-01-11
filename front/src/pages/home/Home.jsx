@@ -18,6 +18,11 @@ const Home = () => {
       <Parallaxd />
       <Headershop />
       <Footer /> */}
+      <Header />
+      <Word />
+      <WeAre />
+      <Parallaxd />
+      <Headershop />
     </div>
   );
 };

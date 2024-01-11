@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./bout.css";
 import "../../component/who/are.css";
 import ParticleComponent from "../../component/particle/ParticleComponent";
-import sanity from "../../component/Sanity/sanity";
+import sanity from "../../Sanity/sanity";
 import { PortableText } from "@portabletext/react";
 import { BlockContent } from "@sanity/block-content-to-react";
 import Headershop from "../../component/headershop/Headershop";

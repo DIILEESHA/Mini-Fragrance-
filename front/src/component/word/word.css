@@ -2,14 +2,13 @@
 
 .word {
   overflow-x: hidden;
-  height: 20vh;
+  /* height: 20vh; */
   /* background-color: #fff; */
   background-color: rgb(243, 241, 241);
 
   overflow-y: hidden;
   margin-left: -20px;
   transform: rotate(0deg);
-
 
   z-index: 1000;
 }
@@ -25,4 +24,11 @@
   font-family: "Raleway";
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: #333;
+}
+
+@media screen and (max-width: 1090px) {
+  .word h1 {
+    padding: 0px 20px;
+    width: 10000vw;
+  }
 }

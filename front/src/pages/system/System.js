@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./sys.css";
 import '../../component/who/are.css'
-import sanity from "../../component/Sanity/sanity";
+import sanity from "../../Sanity/sanity";
+
 import { PortableText } from "@portabletext/react";
 import Headershop from "../../component/headershop/Headershop";
 import Footer from "../../component/footer/Footer";

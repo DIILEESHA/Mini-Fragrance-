@@ -23,7 +23,7 @@ function App() {
     const fetchData = async () => {
       setTimeout(() => {
         setLoading(false);
-      }, 1000);
+      }, 0);
     };
 
     fetchData();
@@ -59,7 +59,7 @@ function App() {
       ) : (
         <BrowserRouter>
           <Cookie />
-          {showPopup && <Newsletter closePopup={closePopup} />}
+          {/* {showPopup && <Newsletter closePopup={closePopup} />} */}
           <Suspense>
             <Nav />
             <Lgnav isScrolled={scrolling} isHomepage={isHomepage} />

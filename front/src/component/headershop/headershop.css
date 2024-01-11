@@ -63,7 +63,6 @@ ul.slick-dots {
   position: relative;
   border-radius: 1%;
 
-
   width: 100%;
   object-fit: cover;
 }
@@ -74,4 +73,15 @@ ul.slick-dots {
 
 .custom-slider .slick-slide > div {
   margin: 0 4px;
+}
+
+@media screen and (max-width: 700px) {
+  .sub_shop {
+    height: 60vh;
+  }
+}
+@media screen and (max-width: 500px) {
+  .sub_shop {
+    height: 40vh;
+  }
 }

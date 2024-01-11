@@ -4,7 +4,8 @@ import "./headershop.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Section from "../velo/Section";
-import sanity from "../Sanity/sanity";
+import sanity from "../../Sanity/sanity";
+
 import { PrevArrow, NextArrow } from "../header/CustomArrow";
 import { Link } from "react-router-dom";
 import Atropos from "atropos/react";
@@ -60,6 +61,49 @@ export default function Headershop() {
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
     className: "custom-slider",
+
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          dots: false,
+          speed: 1100,
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          autoplaySpeed: 5000,
+          className: "center",
+          centerMode: true,
+          infinite: true,
+          centerPadding: "60px",
+          cssEase: "linear",
+          autoplay: true,
+          rtl: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 350,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true,
+        },
+      },
+    ],
   };
 
   const individualCardSliderSettings = {
@@ -90,12 +134,12 @@ export default function Headershop() {
                         className="sub_shop"
                         key={`main-${header.slug?.current}-img1`}
                       >
-                          <img
-                            src={header.productimg1.asset.url}
-                            alt={header.productTitle}
-                            loading="lazy"
-                            title={header.productTitle}
-                          />
+                        <img
+                          src={header.productimg1.asset.url}
+                          alt={header.productTitle}
+                          loading="lazy"
+                          title={header.productTitle}
+                        />
                       </div>
                     )}
                     {header.productimg2 && (
