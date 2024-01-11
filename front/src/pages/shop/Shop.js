@@ -89,17 +89,7 @@ const Shop = () => {
         <>
           <div className="muba">
             <h2 className="nuba">all products</h2>
-            <Atropos
-              style={{ background: "" }}
-              activeOffset={0}
-              shadow={true}
-              shadowScale={0}
-              rotateYMax={0}
-              rotateXMax={0}
-              onEnter={() => console.log("Enter")}
-              onLeave={() => console.log("Leave")}
-              onRotate={(y, x) => console.log("Rotate", y, x)}
-            >
+           
               <div className="shop_grider">
                 {products.map((header) => (
                   <div className="shop_sub_grider">
@@ -109,29 +99,30 @@ const Shop = () => {
                       to={`/product/${header.slug?.current}`}
                       key={header.slug?.current}
                     >
-                      <img
+                     <div className="sub">
+                     <img
                       className="nima"
                         src={header.productimg1.asset.url}
                         alt={header.productTitle}
                         loading="lazy"
                         title={header.productTitle}
                       />
+                     </div>
 
                       <div className="meeba">
                         <h4 className="price">{header.productprice}</h4>
                         <h3 className="shop_title ">
                           <div className="arrower" />
 
-                          {header && header.productTitle}
+                          {header.productTitle.slice(0,15)}
                         </h3>
                       </div>
                     </Link>
                   </div>
                 ))}
               </div>
-            </Atropos>
           </div>
-          <Footer />
+          {/* <Footer /> */}
         </>
       )}
     </div>

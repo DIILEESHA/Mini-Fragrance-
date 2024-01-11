@@ -17,8 +17,9 @@ body {
   width: 6px;
 }
 
-@media screen and (max-width: 900px) {
-  .App {
-    /* background-color: aliceblue; */
+@media screen and (max-width: 600px) {
+  
+  a {
+    /* cursor: none; */
   }
 }

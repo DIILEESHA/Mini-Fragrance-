@@ -22,7 +22,7 @@ const AddToCart = ({ onClose }) => {
       }
     }, 0);
 
-    return subtotal.toFixed(0);;
+    return subtotal.toFixed(0);
   };
 
   const handleClose = () => {
@@ -66,6 +66,8 @@ const AddToCart = ({ onClose }) => {
                       <div className="cart_ul" key={index}>
                         <div className="cart_sub">
                           <img
+                            width={400}
+                            height={600}
                             className="bumba"
                             src={item.product.productimg1.asset.url}
                             alt=""
@@ -108,10 +110,11 @@ const AddToCart = ({ onClose }) => {
               <div className="mular m">
                 <div className="checkout_session">
                   <div className="total_section">
-                  <div className="word_section">
+                    <div className="word_section">
                       <h2 className="sub">sub total</h2>
                       <h3 className="total">${calculateSubtotal()}</h3>
-                    </div> <div className="word_section">
+                    </div>{" "}
+                    <div className="word_section">
                       <h2 className="sub">shipping</h2>
                       <h3 className="total">free</h3>
                     </div>

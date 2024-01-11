@@ -40,10 +40,12 @@ const SingleProduct = () => {
   const { addToCart } = useCart();
   const [quantity, setQuantity] = useState(1);
 
+
   const handleAddToCart = () => {
     addToCart(product, quantity);
     setQuantity(1);
     notify();
+    console.log(handleAddToCart)
   };
 
   const handleIng = () => {
@@ -212,6 +214,7 @@ const SingleProduct = () => {
                 />
 
                 <button onClick={handleAddToCart}>Add to Cart</button>
+                <ToastContainer/>
               </div>
 
               <div className="extra">
@@ -302,7 +305,7 @@ const SingleProduct = () => {
             </div>
           </div>
           <Headershop />
-          <Footer />
+          {/* <Footer /> */}
         </>
       )}
     </div>
