@@ -96,6 +96,7 @@
 .ok {
   font-size: 40px;
   color: #333;
+  
 }
 
 .ok,
@@ -209,4 +210,9 @@
   .bumba {
     object-fit: cover;
   }
+  .ok {
+  font-size: 40px;
+  color: #333;
+  margin-top: 10px;
+}
 }
