@@ -7,4 +7,4 @@ import about from './about'
 import system from './system'
 import product from './product'
 
-export const schemaTypes = [post, author, category, blockContent, header, about, system, product]
+export const schemaTypes = [ blockContent, header, about, system, product]
