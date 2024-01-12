@@ -23,6 +23,7 @@ const Home = () => {
       <WeAre />
       <Parallaxd />
       <Headershop />
+      <Footer />
     </div>
   );
 };

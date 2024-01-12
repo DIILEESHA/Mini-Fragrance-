@@ -100,7 +100,11 @@ const Footer = () => {
           />
         </div>
         <div className="footer_sub">
-          <h1 className="null">nullpunkt</h1>
+          <div className="null">
+
+          <img src="https://i.imgur.com/snGEZt8.png" alt="" className="" />
+          </div>
+          {/* <h1 className="null">nullpunkt</h1> */}
         </div>
         <div className="footer_sub">
           <ul className="footer_link_ul">
