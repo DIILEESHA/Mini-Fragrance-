@@ -1,5 +1,5 @@
 .newsletter_container {
-  z-index: 1000;
+  z-index: 1000000;
   position: fixed;
   width: 100%;
   height: 100vh;

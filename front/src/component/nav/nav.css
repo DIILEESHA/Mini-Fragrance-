@@ -73,6 +73,10 @@
   transform-origin: 0%;
 }
 
+.deta{
+  display: none;
+}
+
 .lg_nav .pink {
   transition: background-color 0s ease;
 }
@@ -219,6 +223,9 @@
   }
   .lg_nav.scrolled.nema {
     color: #333;
+  }
+  .deta{
+    display: flex;
   }
 
   .mobile_ul {

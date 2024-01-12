@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./sys.css";
-import '../../component/who/are.css'
+import "../../component/who/are.css";
 import sanity from "../../Sanity/sanity";
 
 import { PortableText } from "@portabletext/react";
@@ -91,11 +91,14 @@ const System = () => {
     <div className="sys_container">
       {system.map((sys, index) => (
         <div key={index}>
-          <video
-            style={{ width: "100%", height: "auto" }}
-            src={sys?.videoFile?.asset?.url}
-            autoPlay
-          ></video>
+          <div className="video_container">
+            <video
+               autoPlay
+              //  style={{width:"100%"}}
+              className="vid"
+              src={sys?.videoFile?.asset?.url}
+            ></video>
+          </div>
 
           <h2 className="system_title">{sys?.systtitle}</h2>
 
@@ -139,7 +142,7 @@ const System = () => {
               <img className="bus" src={sys?.sysimage6?.asset?.url} alt="" />
             </div>
 
-            <div className="are_sub"></div>
+            <div className="are_sub ma"></div>
 
             <div className="are_sub">
               <div className="are_detail">
@@ -158,9 +161,9 @@ const System = () => {
               <img className="dus" src={sys?.sysimage8?.asset?.url} alt="" />
             </div>
 
-            <div className="are_sub"></div>
+            <div className="are_sub ma"></div>
 
-            <div className="are_sub"></div>
+            <div className="are_sub ma"></div>
 
             <div className="are_sub">
               <img className="dus" src={sys?.sysimage9?.asset?.url} alt="" />

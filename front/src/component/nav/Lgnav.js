@@ -92,7 +92,7 @@ const Lgnav = ({ isScrolled }) => {
         </ul>
 
         <ul className="mobile_ul" onClick={() => isOpen(!open)}>
-          <li className="">
+          <li className="deta">
             {open ? (
               <IoCloseSharp className="nema" />
             ) : (
@@ -121,9 +121,15 @@ const Lgnav = ({ isScrolled }) => {
         >
           <div className="dim">
             <ul className="mobile_uls">
-              <li>about</li>
-              <li>system</li>
-              <li>shop</li>
+              <Link className="linka" onClick={handleClicks} to="/about">
+                <li onClick={() => isOpen(!open)}>about</li>
+              </Link>
+              <Link className="linka" onClick={handleClicks} to="/system">
+                <li onClick={() => isOpen(!open)}>system</li>
+              </Link>
+              <Link className="linka" onClick={handleClicks} to="/shop">
+                <li onClick={() => isOpen(!open)}>shop</li>
+              </Link>
               <li>journey</li>
             </ul>
             <div className="susa">

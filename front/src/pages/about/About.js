@@ -59,43 +59,96 @@ const About = ({ isScrolled }) => {
     <div className="are_container about">
       {about.map((about, index) => (
         <div key={index}>
-          <div className="are_grid">
-            <div className="are_sub">
-              <img className="bus" src={about?.mainimage?.asset?.url} alt="" />
-            </div>
+          {/* <div className="are_grid"> */}
+          <div className="mobile">
+            <div className="are_grid">
+              <div className="are_sub">
+                <img
+                  className="bus"
+                  src={about?.mainimage?.asset?.url}
+                  alt=""
+                />
+              </div>
 
-            <div className="are_sub">
-              <div className="are_detail">
-                <h2 className="detail_title">{about?.abouttitle}</h2>
-                <p className="detail_para">
-                  <PortableText value={about?.body1} />
-                </p>
+              <div className="are_sub">
+                <div className="are_detail">
+                  <h2 className="detail_title">{about?.abouttitle}</h2>
+                  <p className="detail_para">
+                    <PortableText value={about?.body1} />
+                  </p>
+                </div>
+              </div>
+
+              <div className="are_sub">
+                <img
+                  className="dus"
+                  src={about?.mainimage2?.asset?.url}
+                  alt=""
+                />
               </div>
             </div>
-
-            <div className="are_sub">
-              <div className="are_detail">
-                <h2 className="detail_title">{about?.abouttitle2}</h2>
-                <p className="detail_para">
-                  <PortableText value={about?.body2} />
-                </p>
-              </div>
-            </div>
-            <div className="are_sub">
-              <img className="dus" src={about?.mainimage2?.asset?.url} alt="" />
-            </div>
-          </div>
-
-          <div className="second_image">
+            <div className="second_image">
             <img
               className="triple"
               src={about?.mainimage3?.asset?.url}
               alt=""
             />
-            <p className="detail_para">
+            <p className="detail_para dema">
               <PortableText value={about?.body} />
             </p>
           </div>
+          </div>
+
+          <div className="web">
+            <div className="are_grid">
+              <div className="are_sub">
+                <img
+                  className="bus"
+                  src={about?.mainimage?.asset?.url}
+                  alt=""
+                />
+              </div>
+
+              <div className="are_sub">
+                <div className="are_detail">
+                  <h2 className="detail_title">{about?.abouttitle}</h2>
+                  <p className="detail_para">
+                    <PortableText value={about?.body1} />
+                  </p>
+                </div>
+              </div>
+
+              <div className="are_sub">
+                <div className="are_detail">
+                  <h2 className="detail_title">{about?.abouttitle2}</h2>
+                  <p className="detail_para">
+                    <PortableText value={about?.body2} />
+                  </p>
+                </div>
+              </div>
+              <div className="are_sub">
+                <img
+                  className="dus"
+                  src={about?.mainimage2?.asset?.url}
+                  alt=""
+                />
+              </div>
+            </div>
+
+            <div className="second_image">
+              <img
+                className="triple"
+                src={about?.mainimage3?.asset?.url}
+                alt=""
+              />
+              <p className="detail_para">
+                <PortableText value={about?.body} />
+              </p>
+            </div>
+          </div>
+
+          {/* </div> */}
+
           <Headershop />
           <Footer />
           <></>

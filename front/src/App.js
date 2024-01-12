@@ -60,7 +60,7 @@ function App() {
         <BrowserRouter>
           <Cookie />
           {showPopup && <Newsletter closePopup={closePopup} />}
-          <Suspense>
+          <Suspense fallback>
             <Nav />
             <Lgnav isScrolled={scrolling} isHomepage={isHomepage} />
             <Routes>

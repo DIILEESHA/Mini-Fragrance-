@@ -201,9 +201,14 @@
 
   .second_image {
     padding: 0;
+    margin: 20px 0;
   }
 
-  .triple{
+  .dema {
+    padding: 20px;
+  }
+
+  .triple {
     margin-bottom: 30px;
   }
 }
@@ -217,7 +222,6 @@
   }
 }
 
-
 @media screen and (max-width: 300px) {
   .are_sub:nth-child(2) {
     height: 90vh;
@@ -226,4 +230,3 @@
     height: 90vh;
   }
 }
-
