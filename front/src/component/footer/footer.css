@@ -224,6 +224,9 @@ li {
   .footer_grid {
     padding: 50px 30px;
   }
+  .footer_brand {
+    padding: 50px 30px;
+  }
 }
 @media screen and (max-width: 684px) {
   .footer_sub:nth-child(1) {

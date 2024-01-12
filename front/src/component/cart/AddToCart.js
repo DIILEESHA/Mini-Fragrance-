@@ -1,6 +1,6 @@
 // AddToCart.js
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "../../context/CartContext";
 import "./cart.css";
 import { IoMdClose } from "react-icons/io";
@@ -138,7 +138,10 @@ const AddToCart = ({ onClose }) => {
             />
 
             <div>Your cart is currently empty!</div>
-            <button className="continue">continue shopping</button>
+
+            <Link className="linka" to="/shop" onClick={handleClose}>
+              <button className="continue">continue shopping</button>
+            </Link>
           </div>
         </div>
       )}
