@@ -44,8 +44,8 @@ export default defineType({
       title: 'Slug',
       type: 'slug',
       options: {
-        source: 'productTitle', // Use the product title as the source for the slug
-        maxLength: 200, // Set a maximum length for the slug
+        source: 'productTitle', 
+        maxLength: 200, 
       },
     }),
 
