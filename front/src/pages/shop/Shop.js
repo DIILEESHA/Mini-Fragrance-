@@ -122,7 +122,7 @@ const Shop = () => {
                 ))}
               </div>
           </div>
-          {/* <Footer /> */}
+          <Footer />
         </>
       )}
     </div>

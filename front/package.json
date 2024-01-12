@@ -8,6 +8,8 @@
     "@sanity/block-content-to-react": "^3.0.0",
     "@sanity/cli": "^3.23.4",
     "@sanity/client": "^6.10.0",
+    "@stripe/react-stripe-js": "^2.4.0",
+    "@stripe/stripe-js": "^2.3.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",

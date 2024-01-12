@@ -5,6 +5,7 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Cookie from "./component/cookie/Cookie";
 import "./fonts/fonts.css";
 import Shop from "./pages/shop/Shop";
+
 const Home = lazy(() => import("./pages/home/Home"));
 const About = lazy(() => import("./pages/about/About"));
 const Nav = lazy(() => import("./component/nav/Nav"));
@@ -79,6 +80,7 @@ function App() {
               />
               <Route path="/product/:slug" element={<Singleproduct />} />
               <Route path="/shop" element={<Shop />} />
+         
             </Routes>
           </Suspense>
           {/* <Footer /> */}

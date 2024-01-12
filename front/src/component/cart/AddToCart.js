@@ -1,5 +1,6 @@
 // AddToCart.js
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useCart } from "../../context/CartContext";
 import "./cart.css";
 import { IoMdClose } from "react-icons/io";
@@ -8,7 +9,7 @@ import { LiaHandPeaceSolid } from "react-icons/lia";
 const AddToCart = ({ onClose }) => {
   const { cartState, removeFromCart, updateQuantity } = useCart();
   const [isCartVisible, setCartVisible] = useState(true);
-
+  const navigate = useNavigate();
   const calculateSubtotal = () => {
     const subtotal = cartState.cartItems.reduce((total, item) => {
       const price = parseFloat(item.product.productprice.replace("$", ""));

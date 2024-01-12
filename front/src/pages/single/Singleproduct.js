@@ -305,7 +305,7 @@ const SingleProduct = () => {
             </div>
           </div>
           <Headershop />
-          {/* <Footer /> */}
+          <Footer />
         </>
       )}
     </div>
