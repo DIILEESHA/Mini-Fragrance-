@@ -14,7 +14,7 @@ const Parallaxd = () => {
         strength={270}
         className="bgClassName"
         bgImage={
-          "https://nullpunkt.co/cdn/shop/files/04_Couple_169_2.jpg?v=1669921149&width=1500"
+          "https://cdn.sanity.io/images/0q5cvqe1/production/862ddc53f262052118d15a3308b38df8c9e4c456-1500x2000.webp"
         }
       >
         <div className="content">
