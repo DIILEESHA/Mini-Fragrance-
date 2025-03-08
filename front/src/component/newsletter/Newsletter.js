@@ -10,7 +10,7 @@ const Newsletter = ({ closePopup }) => {
           <div className="news_sub_grid d">
             <img 
             className="dewa"
-              src="https://nullpunkt.co/cdn/shop/files/03_IBUKUN_720_5.jpg?v=1670235142&width=1500"
+              src="https://cdn.sanity.io/images/0q5cvqe1/production/80336e868a6091a582e5a9ec862793746289644b-1430x1906.webp"
               alt=""
             />
              <div className="close rtu">
