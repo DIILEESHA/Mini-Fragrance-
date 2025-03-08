@@ -45,7 +45,7 @@ const weAre = () => {
           <div className="are_sub mer">
             <img
               className="bus mg"
-              src="https://nullpunkt.co/cdn/shop/files/01_Stills_110.jpg?v=1669921261"
+          src="https://cdn.sanity.io/images/0q5cvqe1/production/9ddc7d3d8cd59e62eca6bf66cc85023907a7877a-750x1000.webp"
               loading="lazy"
               alt=""
             />
@@ -53,7 +53,7 @@ const weAre = () => {
           <div className="are_sub mer">
             <img
               className="dus fg"
-              src="https://nullpunkt.co/cdn/shop/files/04_Couple_64.jpg?v=1671625376&width=1500"
+              src="https://cdn.sanity.io/images/0q5cvqe1/production/a8b508b254b19d0638529797935ec890636d16ed-502x669.webp"
               loading="lazy"
               alt=""
             />
@@ -97,7 +97,7 @@ const weAre = () => {
           <div className="are_sub mer">
             <img
               className="bus mg"
-              src="https://nullpunkt.co/cdn/shop/files/01_Stills_110.jpg?v=1669921261"
+              src="https://cdn.sanity.io/images/0q5cvqe1/production/862ddc53f262052118d15a3308b38df8c9e4c456-1500x2000.webp"
               loading="lazy"
               alt=""
             />
@@ -134,7 +134,7 @@ const weAre = () => {
           <div className="are_sub mer">
             <img
               className="dus fg"
-              src="https://nullpunkt.co/cdn/shop/files/04_Couple_64.jpg?v=1671625376&width=1500"
+              src="https://cdn.sanity.io/images/0q5cvqe1/production/b76c647f42fd320fe2774688fc9d837d52b3edbe-846x1128.webp"
               loading="lazy"
               alt=""
             />
@@ -178,7 +178,7 @@ const weAre = () => {
       <div className="second_image">
         <img
           className="triple"
-          src="https://nullpunkt.co/cdn/shop/files/04_Couple_157-2.jpg?v=1669923474&width=1500"
+          src="https://cdn.sanity.io/images/0q5cvqe1/production/b76c647f42fd320fe2774688fc9d837d52b3edbe-846x1128.webp"
           loading="lazy"
           alt=""
         />
